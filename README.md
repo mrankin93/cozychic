@@ -33,7 +33,6 @@
     
   </ol>
 </details>
-<br>
 
 ---
 
@@ -54,14 +53,12 @@
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
----
 
 <h2 style="font-weight: bold" id="license">License</h2>
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
----
 
 <h2 style="font-weight: bold" id="contact">Contact</h2>
 
@@ -71,6 +68,5 @@ Project Link: [https://github.com/mrankin93/cozychic](https://github.com/mrankin
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
----
 
 
