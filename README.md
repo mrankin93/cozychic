@@ -45,7 +45,7 @@
 <p>cozychic is a website for my wife to share her blog entries and photos. It's designed to be an extension of her social media presence and act as a central location to share content with her followers.</p>
 <br>
 
-<h3 style="font-weight: bold" id="built-with">Built With:</h3>
+<h3 id="built-with">Built With:</h3>
 
 - HTML
 - CSS
