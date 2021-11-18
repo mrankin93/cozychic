@@ -1,0 +1,66 @@
+/* 
+CSS for tablet-sized screens
+*/
+
+@media only screen and (min-width: 768px) {
+
+  /* Navigation Menu */
+  /* Hiding Mobile Nav */
+
+  #nav-menu {
+    display: none;
+  }
+
+  #secondary-nav {
+    display: none;
+  }
+
+  /* Styles for responsive primary nav */
+
+  #primary-nav-links {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    list-style-type: none;
+  }
+  #primary-nav-links li {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.5em;
+    letter-spacing: .1em;
+    color: rgb(247,246,197);
+    padding-right: 10%;
+  }
+
+  /* Footer */
+
+  #footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: stretch;
+    text-align: center;
+  }
+
+  #footer-div-1, #footer-div-2 {
+    width: 30%;
+  }
+
+  #footer-container h3 {
+    font-size: 1.7em;
+  }
+
+  #footer-container li {
+    font-size: 1.05em;
+  }
+
+  .social-links li {
+    width: 97px;
+  }
+
+  #footer-div-3 {
+    font-size: .8em;
+  }
+
+}
