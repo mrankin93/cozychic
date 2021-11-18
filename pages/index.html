@@ -1,13 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
-  <link rel="icon" href="../img/logos/favicon.png" sizes="16x16">
+  <title>cozychic | Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playball&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="../img/logos/favicon.ico" sizes="16x16">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/medium.css">
+  <link rel="stylesheet" href="../css/large.css">
+  <script src="https://kit.fontawesome.com/2885ba0f41.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-  
+  <header>
+    <div id="logo" class="close-secondary-nav">
+      <a href="#"><img src="../img/logos/logo_main.jpg" alt="" height=99px></a>
+    </div>
+    <nav id="primary-nav">
+      <div id="nav-menu">
+        <p id="nav-menu-text">MENU</p>
+        <button id="nav-menu-button">&#9776;</button>
+        <p id="x-menu-text" class="x-menu-hidden">CLOSE</p>
+        <button id="x-menu-button" class="x-menu-hidden">&times;</button>
+      </div>
+      <ul id="primary-nav-links">
+        <li><a href="../pages/blog.html">Blog</a></li>
+        <li><a href="../pages/gallery.html">Gallery</a></li>
+        <li><a href="../pages/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <nav id="secondary-nav" class="secondary-nav-hidden">
+    <ul>
+      <a href="../pages/blog.html"><li>Blog</li></a>
+      <a href="../pages/gallery.html"><li>Gallery</li></a>
+      <a href="../pages/contact.html"><li>Contact</li></a>
+    </ul>
+  </nav>
+  <main id="page-main" class="close-secondary-nav">
+    <section></section>
+    <aside></aside>
+  </main>
+  <footer id="page-footer" class="close-secondary-nav">
+    <div id="footer-container">
+      <div id="footer-div-1">
+        <h3>social</h3>
+        <ul class="footer-links social-links">
+          <li><a href="https://www.instagram.com/cozycottagefairy/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a href="https://www.pinterest.com/hayleyharlowrankin" target="_blank"><i class="fab fa-pinterest-p"></i> Pinterest</a></li>
+          <li><a href="mailto:hayley.harlow@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
+        </ul>
+      </div>
+      <div id="footer-div-2">
+        <h3>cozychic</h3>
+        <ul class="footer-links page-links">
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="footer-div-3">
+      <p>&copy;2021 Hayley Rankin</p>
+      <p>Website created by: <a href="https://github.com/mrankin93">Michael Rankin</a></p>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
 </body>
+
 </html>
