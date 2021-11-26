@@ -46,3 +46,23 @@ for (let i = 0; i < btns.length; i++) {
       document.getElementById("page-footer").classList.remove("second-nav-open");
     });
 }
+
+// Function to display matching figcaption on page load depending on screen width
+
+window.onload = function() {
+  if (window.matchMedia("(min-width: 768px)").matches) {
+    document.getElementById("cover-caption").innerHTML = `&ldquo;` + `Hayley reading a book` + `&rdquo;`;
+  } else {
+    document.getElementById("cover-caption").innerHTML = `&ldquo;` + `Hayley sipping some tea` + `&rdquo;`;
+  }
+}
+
+// Function to change figcaption when screen is resized
+
+window.addEventListener("resize", function() {
+  if (window.matchMedia("(min-width: 768px)").matches) {
+    document.getElementById("cover-caption").innerHTML = `&ldquo;` + `Hayley reading a book` + `&rdquo;`;
+  } else {
+    document.getElementById("cover-caption").innerHTML = `&ldquo;` + `Hayley sipping some tea` + `&rdquo;`;
+  }
+})

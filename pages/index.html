@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Playball&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
     rel="stylesheet">
   <link rel="icon" href="../img/logos/favicon.ico" sizes="16x16">
   <link rel="stylesheet" href="../css/normalize.css">
@@ -21,57 +21,131 @@
 
 <body>
   <header>
-    <div id="logo" class="close-secondary-nav">
-      <a href="#"><img src="../img/logos/logo_main.jpg" alt="" height=99px></a>
-    </div>
-    <nav id="primary-nav">
-      <div id="nav-menu">
-        <p id="nav-menu-text">MENU</p>
-        <button id="nav-menu-button">&#9776;</button>
-        <p id="x-menu-text" class="x-menu-hidden">CLOSE</p>
-        <button id="x-menu-button" class="x-menu-hidden">&times;</button>
+    <div id="header-content">
+      <div id="logo" class="close-secondary-nav">
+        <a href="#"><img src="../img/logos/logo_main.jpg" alt="" height=99px></a>
       </div>
-      <ul id="primary-nav-links">
-        <li><a href="../pages/blog.html">Blog</a></li>
-        <li><a href="../pages/gallery.html">Gallery</a></li>
-        <li><a href="../pages/contact.html">Contact</a></li>
-      </ul>
-    </nav>
+      <nav id="primary-nav">
+        <div id="nav-menu">
+          <p id="nav-menu-text">MENU</p>
+          <button id="nav-menu-button">&#9776;</button>
+          <p id="x-menu-text" class="x-menu-hidden">CLOSE</p>
+          <button id="x-menu-button" class="x-menu-hidden">&times;</button>
+        </div>
+        <ul id="primary-nav-links">
+          <li><a href="../pages/looks.html">Looks</a></li>
+          <li><a href="../pages/blog.html">Blog</a></li>
+          <li><a href="../pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <nav id="secondary-nav" class="secondary-nav-hidden">
     <ul>
-      <a href="../pages/blog.html"><li>Blog</li></a>
-      <a href="../pages/gallery.html"><li>Gallery</li></a>
-      <a href="../pages/contact.html"><li>Contact</li></a>
+      <a href="../pages/looks.html">
+        <li>Looks</li>
+      </a>
+      <a href="../pages/blog.html">
+        <li>Blog</li>
+      </a>
+      <a href="../pages/contact.html">
+        <li>Contact</li>
+      </a>
     </ul>
   </nav>
   <main id="page-main" class="close-secondary-nav">
-    <section></section>
-    <aside></aside>
+      <h1 id="website-heading">Simple Living &bull; Timeless Style</h1>
+      <div id="main-container">
+        <div id="main-content">
+          <section id="cover">
+            <figure>
+              <picture id="cover-picture">
+                <source media="(min-width:768px)" srcset="../img/content/coverpic-desktop-1080x2.jpg" width=100%>
+                <source media="(min-width:375px)" srcset="../img/content/coverpic-mobile-1080x1.jpg" width=100%>
+                <img src="../img/content/coverpic-mobile-1080x1.jpg" alt="Hayley posing for a picture"
+                  title="Hayley posing for a picture">
+              </picture>
+              <figcaption id="cover-caption"></figcaption>
+            </figure>
+          </section>
+        </div>
+        <aside id="sidebar">
+          <section id="recent-blog-posts">
+            <h3>Recent Blog Posts</h3>
+            <hr>
+            <div id="blog-post-list">
+              <div class="blog-snippet">
+                <div class="blog-snippet-thumbnail"><img src="../img/thumbnails/square-540-1.jpg"></div>
+                <div class="blog-snippet-content">
+                  <div class="blog-snippet-title-date">
+                    <p>Title of blog post</p>
+                    <p>Posted: <time datetime="2021-11-21">11/22/21</time>
+                    </p>
+                  </div>
+                  <p class="blog-snippet-read-more"><a href="#">Read more</a></p>
+                </div>
+
+              </div>
+              <div class="blog-snippet">
+                <div class="blog-snippet-thumbnail"><img src="../img/thumbnails/square-540-2.jpg"></div>
+                <div class="blog-snippet-content">
+                  <div class="blog-snippet-title-date">
+                    <p>Title of blog post which is quite long</p>
+                    <p>Posted: <time datetime="2021-11-21">11/22/21</time>
+                    </p>
+                  </div>
+                  <p class="blog-snippet-read-more"><a href="#">Read more</a></p>
+                </div>
+
+              </div>
+              <div class="blog-snippet">
+                <div class="blog-snippet-thumbnail"><img src="../img/thumbnails/square-540-3.jpg"></div>
+                <div class="blog-snippet-content">
+                  <div class="blog-snippet-title-date">
+                    <p>Title of blog post</p>
+                    <p>Posted: <time datetime="2021-11-21">11/22/21</time>
+                    </p>
+                  </div>
+                  <p class="blog-snippet-read-more"><a href="#">Read more</a></p>
+                </div>
+
+              </div>
+            </div>
+          </section>
+          <section id="latest-looks">
+            <h3>Latest Looks</h3>
+            <hr>
+          </section>
+        </aside>
+      </div>
   </main>
   <footer id="page-footer" class="close-secondary-nav">
-    <div id="footer-container">
-      <div id="footer-div-1">
-        <h3>social</h3>
-        <ul class="footer-links social-links">
-          <li><a href="https://www.instagram.com/cozycottagefairy/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-          <li><a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
-          <li><a href="https://www.pinterest.com/hayleyharlowrankin" target="_blank"><i class="fab fa-pinterest-p"></i> Pinterest</a></li>
-          <li><a href="mailto:hayley.harlow@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
-        </ul>
+    <div id="footer-content">
+      <div id="footer-container">
+        <div id="footer-div-1">
+          <h3>social</h3>
+          <ul class="footer-links social-links">
+            <li><a href="https://www.instagram.com/cozycottagefairy/" target="_blank"><i
+                  class="fab fa-instagram-square"></i> Instagram</a></li>
+            <li><a href="https://www.tumblr.com" target="_blank"><i class="fab fa-tumblr-square"></i> Tumblr</a></li>
+            <li><a href="https://www.pinterest.com/hayleyharlowrankin" target="_blank"><i
+                  class="fab fa-pinterest-square"></i> Pinterest</a></li>
+            <li><a href="mailto:cozychic@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
+          </ul>
+        </div>
+        <div id="footer-div-2">
+          <h3>cozychic</h3>
+          <ul class="footer-links page-links">
+            <li><a href="looks.html">Looks</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
       </div>
-      <div id="footer-div-2">
-        <h3>cozychic</h3>
-        <ul class="footer-links page-links">
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <div id="footer-div-3">
+        <p>&copy;2021 Hayley Rankin</p>
+        <p>Website created by: <a href="https://github.com/mrankin93">Michael Rankin</a></p>
       </div>
-    </div>
-    <div id="footer-div-3">
-      <p>&copy;2021 Hayley Rankin</p>
-      <p>Website created by: <a href="https://github.com/mrankin93">Michael Rankin</a></p>
     </div>
   </footer>
   <script src="../js/main.js"></script>

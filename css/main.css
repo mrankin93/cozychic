@@ -18,8 +18,13 @@ html {
 
 body {
   font-size: 16px;
-  font-family: 'Playball', cursive;
+  font-family: 'Cormorant Garamond', serif;
   font-family: 'Playfair Display', serif;
+  background-color: white;
+}
+
+ul {
+  list-style-type: none;
 }
 
 a {
@@ -27,8 +32,9 @@ a {
   color: inherit;
 }
 
-a:hover, li a:hover, #secondary-nav a:hover, #nav-menu:hover p, #nav-menu:hover button, #primary-nav-links li:hover  {
+a:hover, li a:hover, #secondary-nav a:hover, #nav-menu:hover p, #nav-menu:hover button, #primary-nav-links li a:hover  {
   color: rgb(255, 242, 126);
+  transition: color 0.5s ease-in-out;
 }
 
 /* Header Styles */
@@ -39,22 +45,35 @@ header {
   background-color: rgb(72,71,36);
   border-bottom: 2px solid rgb(247,246,197);
   height: 100px;
-  position: fixed;
+  position: sticky;
   z-index: 2;
   top: 0;
   align-items: center;
   justify-content: space-between;
 }
 
-header div img {
-  margin-left: 30px;
-  margin-right: 30px;
+#header-content {
+  display: flex;
+  width: 100%;
+  max-width: 1256px;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+  top: 0;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+#logo img {
+  padding: 0 16px;
 }
 
 /* Navigation Styles */
 
 #nav-menu {
-  margin-right: 30px;
+  padding: 0 16px;
 }
 
 header nav {
@@ -75,6 +94,7 @@ header nav {
   margin: 0 0 -15px 0;
   color: rgb(247,246,197);
   cursor: pointer;
+  text-shadow: -2px 2px 1px black;
 }
 
 #nav-menu-button {
@@ -86,6 +106,7 @@ header nav {
   color: rgb(247,246,197);
   margin: 0 0 -5px -1px;
   padding: 0;
+  text-shadow: -2px 2px 1px black;
 }
 
 #x-menu-button {
@@ -97,6 +118,7 @@ header nav {
   color: rgb(247,246,197);
   margin: 5px 0 -5px -1px;
   padding: 0;
+  text-shadow: -2px 2px 1px black;
 }
 
 #x-menu-text {
@@ -107,6 +129,7 @@ header nav {
   margin: 5px 0 -15px -1.5px;
   color: rgb(247,246,197);
   cursor: pointer;
+  text-shadow: -2px 2px 1px black;
 }
 
 /* Secondary Nav */
@@ -137,11 +160,14 @@ header nav {
   border-bottom: 1px solid rgba(247,246,197);
   background-color: rgb(54, 53, 27, .8);
   color: rgba(247,246,197,.8);
+  text-shadow: -2px 2px rgba(0, 0, 0, .8);
 }
 
 #secondary-nav ul li:hover {
   background-color: rgba(54, 53, 27);
   color: rgba(255, 242, 126);
+  text-shadow: -2px 2px rgba(0, 0, 0);
+  transition: all 0.5s ease-in-out;
 }
 
 #secondary-nav ul {
@@ -165,8 +191,169 @@ header nav {
 /* Main Styles */
 
 main {
-  height: 1500px;
-  background-color: grey;
+  padding: 25px 0;
+  background-color: #FFFFF9;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+#website-heading {
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 6vw;
+  font-weight: 400;
+  font-style: italic;
+  text-shadow: -1.5px 1.5px 1px #ad966a;
+  color: rgb(45,29,29);
+  padding-bottom: 25px;
+  margin: 0;
+}
+
+#main-container {
+  /* display: flex;
+  flex-direction: column; */
+  width: 90%;
+  margin: 0 auto;
+}
+
+#cover figure {
+  box-shadow: -2px 2px 6px 2px rgba(0, 0, 0, .5);
+  border-radius: 20px;
+  margin: 0 0 25px 0;
+  transform: scale(1);
+  transition: transform 0.5s ease-in-out;
+}
+
+#cover figure:hover {
+  transform: scale(1.02);
+  transition: all 0.5s ease-in-out;
+}
+
+#cover-picture img {
+  border-radius: 20px 20px 0 0;
+}
+
+#cover-caption {
+  text-align: center;
+  font-style: italic;
+  padding: 10px 0;
+  margin-top: -2px;
+  background: white;
+  border-radius: 0 0 20px 20px;
+}
+
+#sidebar {
+  border-radius: 20px;
+  box-shadow: -2px 2px 6px 2px rgba(0, 0, 0, .5);
+}
+
+#recent-blog-posts, #latest-looks {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#sidebar a {
+  transition: color .5s ease-in;
+}
+
+#sidebar a:hover {
+  transition: color .5s ease;
+}
+
+#sidebar h3 {
+  text-align: center;
+  font-size: 1.3em;
+  margin: 20px 0;
+  color: #2E1D1D;
+}
+
+#sidebar hr {
+  background-color: #2E1D1D;
+  border: none;
+  height: 1px;
+}
+
+#blog-post-list {
+  display: flex;
+}
+
+.blog-snippet {
+  box-shadow: -2px 2px 6px 2px rgba(0, 0, 0, .5);
+  background-color: #C6C5A6;
+  display: flex;
+  margin: 10px auto;
+  padding: 0;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.blog-snippet-thumbnail img {
+  display: block;
+  width: 100%;
+  border-radius: 5px 0 0 5px;
+}
+
+.blog-snippet-content {
+  color: #2E1D1D;
+  text-align: center;
+}
+
+.blog-snippet-title-date {
+  margin: 0;
+}
+
+.blog-snippet-title-date p:nth-child(1) {
+  font-weight: bold;
+  margin: 0;
+}
+
+.blog-snippet-title-date p:nth-child(2) {
+  font-size: .8em;
+  font-style: italic;
+  margin: 5px 0;
+}
+
+.blog-snippet-read-more {
+  margin: 0;
+  text-decoration: underline;
+  font-size: .8em;
+}
+
+@media only screen and (max-width: 768px) {
+
+  #blog-post-list {
+    flex-direction: column;
+  }
+
+  .blog-snippet-thumbnail {
+    flex: 0 1 26%;
+  }
+
+  .blog-snippet-content {
+    flex: 0 1 74%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 5px;
+  }
+
+}
+
+@media only screen and (min-width: 600px) {
+  
+  .blog-snippet-title-date p:nth-child(1) {
+    font-size: 1.1em;
+  }
+
+  .blog-snippet-title-date p:nth-child(2) {
+    font-size: .9em;
+    margin: 15px 0;
+  }
+
+  .blog-snippet-read-more {
+    font-size: .9em;
+  }
+
 }
 
 /* Footer Styles */
@@ -174,13 +361,31 @@ main {
 footer {
   background-color: rgb(72,71,36);
   border-top: 2px solid rgb(247,246,197);
-  position: fixed;
+  position: relative;
   bottom: 0;
+  /* max-width: 1024px; */
   width: 100%;
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
+  padding-bottom: 16px;
   color: rgb(247,246,197);
   text-align: center;
+}
+
+#footer-content {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+#footer-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#footer-container h3 {
+  font-size: 1.6em;
+  margin: 25px 0;
+  text-shadow: -2px 2px black;
 }
 
 .footer-links {
@@ -210,33 +415,36 @@ footer {
 
 #footer-div-3 {
   font-size: .75em;
-}
-
-#footer-container {
+  padding-top: 25px;
   display: flex;
-  flex-direction: column;
-  text-align: center;
+  justify-content: center;
 }
 
-#footer-container h3 {
-  font-size: 1.6em;
+#footer-div-3 p:first-child {
+  margin: 6px 0;
+  padding: 0 10px 0 0;
+}
+
+#footer-div-3 p:last-child {
+  margin: 6px 0;
+  padding: 0 0 0 10px;
 }
 
 /* Footer - Aligning Social Icons to Left */
 
 .social-links li:nth-of-type(2) i {
   position: relative;
-  right: 18.5px;
+  right: 20.25px;
 }
 
 .social-links li:nth-of-type(3) i {
   position: relative;
-  right: 9px;
+  right: 8px;
 }
 
 .social-links li:nth-of-type(4) i {
   position: relative;
-  right: 29px;
+  right: 30px;
 }
 
 /* Hidden Elements */

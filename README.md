@@ -13,7 +13,7 @@
 <br>
 
 <div align="center">
-  <div><a href="https://github.com/mrankin93/cozychic"><img src="img/logos/favicon.png" width="300"></a>
+  <div><a href="https://github.com/mrankin93/cozychic"><img src="img/logos/logo_main.jpg" width="300"></a>
   </div>
   <h3 style="font-weight: bold">cozychic</h3>
     <p style="font-style: italic"> A website for Hayley Rankin </p>
