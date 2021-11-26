@@ -8,18 +8,30 @@ CSS for laptop and desktop sized screens
 
   #primary-nav-links li {
     font-size: 1.8em;
-    padding-right: 15%;
+    padding-left: 12%;
+  }
+
+  /* Main */
+
+  #main-container {
+    display: flex;
+  }
+
+  #main-content {
+    margin-right: 15px;
+    flex: 0 1 80%;
+  }
+
+  #sidebar {
+    margin-left: 15px;
+    flex: 0 1 20%;
+  }
+
+  #blog-post-list {
+    flex-direction: column;
   }
 
   /* Footer */
-
-  #footer-div-1 {
-    width: 50%;
-  }
-
-  #footer-div-2 {
-    width: 50%;
-  }
 
   #footer-container h3 {
     font-size: 1.8em;
@@ -35,5 +47,13 @@ CSS for laptop and desktop sized screens
 
   #footer-div-3 {
     font-size: .85em;
+  }
+
+  #footer-div-3 p:first-child {
+    padding: 0 15px 0 0;
+  }
+  
+  #footer-div-3 p:last-child {
+    padding: 0 0 0 15px;
   }
 }

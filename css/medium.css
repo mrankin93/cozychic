@@ -4,8 +4,8 @@ CSS for tablet-sized screens
 
 @media only screen and (min-width: 768px) {
 
-  /* Navigation Menu */
-  /* Hiding Mobile Nav */
+  /* 1. Navigation Menu */
+  /* 1.1. Hiding Mobile Nav */
 
   #nav-menu {
     display: none;
@@ -15,36 +15,77 @@ CSS for tablet-sized screens
     display: none;
   }
 
-  /* Styles for responsive primary nav */
+  /* 1.2. Styles for responsive primary nav */
 
   #primary-nav-links {
     display: flex;
     justify-content: flex-end;
     width: 100%;
     list-style-type: none;
-  }
-  #primary-nav-links li {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-weight: 700;
-    font-size: 1.5em;
-    letter-spacing: .1em;
-    color: rgb(247,246,197);
-    padding-right: 10%;
+    padding: 0 16px;
   }
 
-  /* Footer */
+  #primary-nav-links li {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.5em;
+    padding-left: 7%;
+    color: rgb(247,246,197);
+    text-shadow: -2px 2px black;
+  }
+
+  /* 2. Main */
+
+  #blog-post-list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .blog-snippet {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 1 32%;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #C6C5A6;
+  }
+
+  .blog-snippet-thumbnail img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .blog-snippet-content {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    margin: 10px 8px;
+  }
+
+  .blog-snippet-title-date {
+    margin: 0 0 auto 0;
+  }
+
+  .blog-snippet-title-date p:nth-child(2) {
+    font-size: .9em;
+    font-style: italic;
+    margin: 15px 0;
+  }
+
+  .blog-snippet-read-more {
+    margin: 0;
+    text-decoration: underline;
+    text-align: center;
+    font-size: 0.9em;
+  }
+
+  /* 3. Footer */
 
   #footer-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-self: stretch;
-    text-align: center;
-  }
-
-  #footer-div-1, #footer-div-2 {
-    width: 30%;
   }
 
   #footer-container h3 {
@@ -55,12 +96,24 @@ CSS for tablet-sized screens
     font-size: 1.05em;
   }
 
+  #footer-div-1, #footer-div-2 {
+    flex: 1 1 100%;
+  }
+
   .social-links li {
     width: 97px;
   }
 
   #footer-div-3 {
     font-size: .8em;
+  }
+
+  #footer-div-3 p:first-child {
+    padding: 0 12.5px 0 0;
+  }
+  
+  #footer-div-3 p:last-child {
+    padding: 0 0 0 12.5px;
   }
 
 }
