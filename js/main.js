@@ -1,68 +1,85 @@
-// Function for toggling the mobile nav menu
-// Classes are added and removed with a click of the nav-menu element
-// CSS Styles these classes to show or hide elements
+/*
+1. Function for toggling the mobile nav menu
+Classes are added and removed when nav-menu element is clicked
+CSS Styles these classes to show or hide elements
+*/
+
 function toggleMenu() {
-  if (document.getElementById("x-menu-button").classList.contains("x-menu-hidden")) {
-    document.getElementById("x-menu-button").classList.remove("x-menu-hidden");
-    document.getElementById("x-menu-text").classList.remove("x-menu-hidden");
-    document.getElementById("secondary-nav").classList.remove("secondary-nav-hidden");
-    document.getElementById("page-main").classList.remove("close-secondary-nav");
-    document.getElementById("page-footer").classList.remove("close-secondary-nav");
-    document.getElementById("nav-menu-text").classList.add("nav-menu-hidden");
-    document.getElementById("nav-menu-button").classList.add("nav-menu-hidden");
-    document.getElementById("page-main").classList.add("second-nav-open");
-    document.getElementById("page-footer").classList.add("second-nav-open");
+  if (app.xMenuButton.classList.contains("x-menu-hidden")) {
+    app.xMenuButton.classList.remove("x-menu-hidden"); 
+    app.xMenuText.classList.remove("x-menu-hidden");
+    app.secondaryNav.classList.remove("secondary-nav-hidden");
+    app.pageMain.classList.remove("close-secondary-nav");
+    app.pageFooter.classList.remove("close-secondary-nav");
+    app.navMenuText.classList.add("nav-menu-hidden");
+    app.navMenuButton.classList.add("nav-menu-hidden");
+    app.pageMain.classList.add("second-nav-open");
+    app.pageFooter.classList.add("second-nav-open");
   } else {
-    document.getElementById("x-menu-button").classList.add("x-menu-hidden");
-    document.getElementById("x-menu-text").classList.add("x-menu-hidden");
-    document.getElementById("secondary-nav").classList.add("secondary-nav-hidden");
-    document.getElementById("page-main").classList.add("close-secondary-nav");
-    document.getElementById("page-footer").classList.add("close-secondary-nav");
-    document.getElementById("nav-menu-text").classList.remove("nav-menu-hidden");
-    document.getElementById("nav-menu-button").classList.remove("nav-menu-hidden");
-    document.getElementById("page-main").classList.remove("second-nav-open");
-    document.getElementById("page-footer").classList.remove("second-nav-open");
+    app.xMenuButton.classList.add("x-menu-hidden");
+    app.xMenuText.classList.add("x-menu-hidden");
+    app.secondaryNav.classList.add("secondary-nav-hidden");
+    app.pageMain.classList.add("close-secondary-nav");
+    app.pageFooter.classList.add("close-secondary-nav");
+    app.navMenuText.classList.remove("nav-menu-hidden");
+    app.navMenuButton.classList.remove("nav-menu-hidden");
+    app.pageMain.classList.remove("second-nav-open");
+    app.pageFooter.classList.remove("second-nav-open");
   }
 }
-let x = document.getElementById('nav-menu');
-x.onclick = toggleMenu;
 
-// Function for closing mobile nav menu when the homepage logo,
-// main, or footer elements are clicked.
-// Function detects clicks for elements with close-secondary-nav class
-// Function then adds and removes classes upon click.
-btns = document.getElementsByClassName("close-secondary-nav");
-for (let i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click",
+app.navMenu.onclick = toggleMenu;
+
+/*
+2. Event listener for clicking outside of mobile nav & header
+Function detects clicks for main and footer elements with .close-secondary-nav
+*/
+
+for (let i = 0; i < app.clickOutsideNav.length; i++) {
+  app.clickOutsideNav[i].addEventListener("click",
     function hideSecondaryNav () {
-      document.getElementById("x-menu-button").classList.add("x-menu-hidden");
-      document.getElementById("x-menu-text").classList.add("x-menu-hidden");
-      document.getElementById("secondary-nav").classList.add("secondary-nav-hidden");
-      document.getElementById("page-main").classList.add("close-secondary-nav");
-    document.getElementById("page-footer").classList.add("close-secondary-nav");
-      document.getElementById("nav-menu-text").classList.remove("nav-menu-hidden");
-      document.getElementById("nav-menu-button").classList.remove("nav-menu-hidden");
-      document.getElementById("page-main").classList.remove("second-nav-open");
-      document.getElementById("page-footer").classList.remove("second-nav-open");
+      app.xMenuButton.classList.add("x-menu-hidden");
+      app.xMenuText.classList.add("x-menu-hidden");
+      app.secondaryNav.classList.add("secondary-nav-hidden");
+      app.pageMain.classList.add("close-secondary-nav");
+      app.pageFooter.classList.add("close-secondary-nav");
+      app.navMenuText.classList.remove("nav-menu-hidden");
+      app.navMenuButton.classList.remove("nav-menu-hidden");
+      app.pageMain.classList.remove("second-nav-open");
+      app.pageFooter.classList.remove("second-nav-open");
     });
 }
 
-// Function to display matching figcaption on page load depending on screen width
+/*
+3. When page is loaded, different figcaptions appear with the cover picture in index.html
+Two different figcaptions display depending on screen width
+*/
 
 window.onload = function() {
   if (window.matchMedia("(min-width: 768px)").matches) {
-    document.getElementById("cover-caption").innerHTML = `&ldquo;` + `Hayley reading a book` + `&rdquo;`;
+    app.coverCaption.innerHTML = `&ldquo;` + `Hayley reading a book` + `&rdquo;`;
   } else {
-    document.getElementById("cover-caption").innerHTML = `&ldquo;` + `Hayley sipping some tea` + `&rdquo;`;
+    app.coverCaption.innerHTML = `&ldquo;` + `Hayley holding a cup of tea` + `&rdquo;`;
   }
 }
 
-// Function to change figcaption when screen is resized
+/*
+4. When window is resized, the figcaption will change at the 768px breakpoint
+*/
 
 window.addEventListener("resize", function() {
   if (window.matchMedia("(min-width: 768px)").matches) {
-    document.getElementById("cover-caption").innerHTML = `&ldquo;` + `Hayley reading a book` + `&rdquo;`;
+    app.coverCaption.innerHTML = `&ldquo;` + `Hayley reading a book` + `&rdquo;`;
   } else {
-    document.getElementById("cover-caption").innerHTML = `&ldquo;` + `Hayley sipping some tea` + `&rdquo;`;
+    app.coverCaption.innerHTML = `&ldquo;` + `Hayley holding a cup of tea` + `&rdquo;`;
   }
 })
+
+/*
+5. When user hovers over #latest-looks-list on medium-sized screens, an always visible scrollbar is toggled
+*/
+
+document.addEventListener('mousemove', function checkHover() {
+  const hovered = app.isHover(app.latestLooksList);
+  hovered ? app.addScroll() : app.removeScroll();
+});
