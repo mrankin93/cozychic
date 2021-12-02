@@ -20,18 +20,24 @@
 </head>
 
 <body>
+  <!-- HEADER -->
   <header>
+    <!-- DIVIDER SETS CONTENT MAX-WIDTH -->
     <div id="header-content">
-      <div id="logo" class="close-secondary-nav">
-        <a href="#"><img src="../img/logos/logo_main.jpg" alt="" height=99px></a>
+      <!-- HEADER LOGO TOP LEFT -->
+      <div id="logo">
+        <a href="../pages/index.html"><img src="../img/logos/logo_main.jpg" alt="cozychic logo"></a>
       </div>
+      <!-- PRIMARY NAV -->
       <nav id="primary-nav">
+        <!-- MENU BUTTON - MENU & CLOSE X -->
         <div id="nav-menu">
           <p id="nav-menu-text">MENU</p>
           <button id="nav-menu-button">&#9776;</button>
-          <p id="x-menu-text" class="x-menu-hidden">CLOSE</p>
-          <button id="x-menu-button" class="x-menu-hidden">&times;</button>
+          <p id="x-menu-text" class="x-menu x-menu-hidden">CLOSE</p>
+          <button id="x-menu-button" class="x-menu x-menu-hidden">&times;</button>
         </div>
+        <!-- NAVIGATION FOR TABLET & LAPTOP SCREEN SIZES -->
         <ul id="primary-nav-links">
           <li><a href="../pages/looks.html">Looks</a></li>
           <li><a href="../pages/blog.html">Blog</a></li>
@@ -40,6 +46,7 @@
       </nav>
     </div>
   </header>
+  <!-- DROPDOWN MENU -->
   <nav id="secondary-nav" class="secondary-nav-hidden">
     <ul>
       <a href="../pages/looks.html">
@@ -52,13 +59,22 @@
         <li>Contact</li>
       </a>
     </ul>
+    <div id="grey-out-div" class="close-secondary-nav"></div>
   </nav>
+  <!-- MAIN SECTION -->
   <main id="page-main" class="close-secondary-nav">
-      <h1 id="website-heading">Simple Living &bull; Timeless Style</h1>
-      <div id="main-container">
-        <div id="main-content">
+    <!-- DIVIDER SETS MAIN MAX-WIDTH & SPLITS MAIN CONTENT FROM ASIDE -->
+    <div id="main-container">
+      <!-- WEBSITE HEADING -->
+      <h1 id="page-heading">Simple Living &bull; Timeless Style</h1>
+      <!-- SECTION FOR MAIN CONTENT -->
+      <div id="main-aside">
+        <section id="main-content">
+          <!-- 1ST SECTION OF MAIN CONTENT FOR HOME PAGE -->
           <section id="cover">
+            <!-- COVER PICTURE FOR WEBSITE HOME -->
             <figure>
+              <!-- TWO DIFFERENT PICTURES FOR DIFFERENT SCREEN SIZES -->
               <picture id="cover-picture">
                 <source media="(min-width:768px)" srcset="../img/content/coverpic-desktop-1080x2.jpg" width=100%>
                 <source media="(min-width:375px)" srcset="../img/content/coverpic-mobile-1080x1.jpg" width=100%>
@@ -68,59 +84,105 @@
               <figcaption id="cover-caption"></figcaption>
             </figure>
           </section>
-        </div>
+        </section>
+        <!-- SIDEBAR -->
         <aside id="sidebar">
+          <!-- SIDEBAR - RECENT BLOG POSTS -->
           <section id="recent-blog-posts">
             <h3>Recent Blog Posts</h3>
             <hr>
+            <!-- LIST OF BLOG POST SNIPPETS -->
             <div id="blog-post-list">
+              <!-- BLOG SNIPPET 1 -->
               <div class="blog-snippet">
-                <div class="blog-snippet-thumbnail"><img src="../img/thumbnails/square-540-1.jpg"></div>
+                <div class="blog-snippet-thumbnail"><img src="../img/thumbnails/square-540-1.jpg"
+                    alt="Thumbnail for blog post 1"></div>
                 <div class="blog-snippet-content">
                   <div class="blog-snippet-title-date">
                     <p>Title of blog post</p>
-                    <p>Posted: <time datetime="2021-11-21">11/22/21</time>
+                    <p>Posted: <time datetime="2021-11-22">11/22/21</time>
                     </p>
                   </div>
                   <p class="blog-snippet-read-more"><a href="#">Read more</a></p>
                 </div>
-
               </div>
+              <!-- BLOG SNIPPET 2 -->
               <div class="blog-snippet">
-                <div class="blog-snippet-thumbnail"><img src="../img/thumbnails/square-540-2.jpg"></div>
+                <div class="blog-snippet-thumbnail"><img src="../img/thumbnails/square-540-2.jpg"
+                    alt="Thumbnail for blog post 2"></div>
                 <div class="blog-snippet-content">
                   <div class="blog-snippet-title-date">
                     <p>Title of blog post which is quite long</p>
-                    <p>Posted: <time datetime="2021-11-21">11/22/21</time>
+                    <p>Posted: <time datetime="2021-11-22">11/22/21</time>
                     </p>
                   </div>
                   <p class="blog-snippet-read-more"><a href="#">Read more</a></p>
                 </div>
-
               </div>
+              <!-- BLOG SNIPPET 3 -->
               <div class="blog-snippet">
-                <div class="blog-snippet-thumbnail"><img src="../img/thumbnails/square-540-3.jpg"></div>
+                <div class="blog-snippet-thumbnail"><img src="../img/thumbnails/square-540-3.jpg"
+                    alt="Thumbnail for blog post 3"></div>
                 <div class="blog-snippet-content">
                   <div class="blog-snippet-title-date">
                     <p>Title of blog post</p>
-                    <p>Posted: <time datetime="2021-11-21">11/22/21</time>
+                    <p>Posted: <time datetime="2021-11-22">11/22/21</time>
                     </p>
                   </div>
                   <p class="blog-snippet-read-more"><a href="#">Read more</a></p>
                 </div>
-
               </div>
             </div>
+            <!-- BUTTON - See all posts -->
+            <div class="sidebar-btn"><a href="../pages/blog.html"><button class="btn-style btn-color">See all
+                  posts</button></a></div>
           </section>
+          <!-- SIDEBAR - RECENT LOOKS -->
           <section id="latest-looks">
             <h3>Latest Looks</h3>
             <hr>
+            <!-- LIST OF LOOK SNIPPETS -->
+            <div id="latest-looks-list" class="">
+              <!-- LOOK SNIPPET 1 -->
+              <div class="look-snippet">
+                <img class="look-snippet-thumbnail" src="../img/portraits/portrait-11.jpg"
+                  alt="Hayley wearing a yellow dress">
+                <p class="look-snippet-date">Snapped on: <time datetime="2021-11-25">11/25/21</time></p>
+              </div>
+              <!-- LOOK SNIPPET 2 -->
+              <div class="look-snippet">
+                <img class="look-snippet-thumbnail" src="../img/portraits/portrait-10.jpg"
+                  alt="Hayley wearing a navy cardigan">
+                <p class="look-snippet-date">Snapped on: <time datetime="2021-11-20">11/20/21</time></p>
+              </div>
+              <!-- LOOK SNIPPET 3 -->
+              <div class="look-snippet">
+                <img class="look-snippet-thumbnail" src="../img/portraits/portrait-09.jpg"
+                  alt="Hayley wearing a black blouse">
+                <p class="look-snippet-date">Snapped on: <time datetime="2021-11-17">11/17/21</time></p>
+              </div>
+              <!-- LOOK SNIPPET 4 -->
+              <div class="look-snippet">
+                <img class="look-snippet-thumbnail" src="../img/portraits/portrait-08.jpg"
+                  alt="Hayley wearing a red jacket outside">
+                <p class="look-snippet-date">Snapped on: <time datetime="2021-11-17">11/17/21</time></p>
+              </div>
+            </div>
+            <!-- SCROLLBAR DIV - When scrollbar isn't present -->
+            <div id="scrollbar-div" class="scrollbar-div-visible"></div>
+            <!-- BUTTON - See all looks -->
+            <div class="sidebar-btn"><a href="../pages/looks.html"><button class="btn-style btn-color">See all
+                  looks</button></a></div>
           </section>
         </aside>
       </div>
+    </div>
   </main>
+  <!-- FOOTER -->
   <footer id="page-footer" class="close-secondary-nav">
+    <!-- DIVIDER SETS CONTENT MAX-WIDTH -->
     <div id="footer-content">
+      <!-- CONTAINER FOR SOCIAL AND COZYCHIC LINKS -->
       <div id="footer-container">
         <div id="footer-div-1">
           <h3>social</h3>
@@ -142,12 +204,15 @@
           </ul>
         </div>
       </div>
+      <!-- CONTAINER FOR COPYRIGHT -->
       <div id="footer-div-3">
         <p>&copy;2021 Hayley Rankin</p>
         <p>Website created by: <a href="https://github.com/mrankin93">Michael Rankin</a></p>
       </div>
     </div>
   </footer>
+  <!-- SCRIPTS LINKED HERE -->
+  <script src="../js/app.js"></script>
   <script src="../js/main.js"></script>
 </body>
 

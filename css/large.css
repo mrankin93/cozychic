@@ -1,5 +1,5 @@
 /* 
-CSS for laptop and desktop sized screens
+Laptops and desktop sized screens
 */
 
 @media only screen and (min-width: 1024px) {
@@ -12,8 +12,21 @@ CSS for laptop and desktop sized screens
   }
 
   /* Main */
+  /* #main-container and #main-content */
+
+  /* #main-container {
+    display: flex;
+  } */
+
+  #page-heading {
+    padding: 50px 0;
+  }
 
   #main-container {
+    width: 95%;
+  }
+
+  #main-aside {
     display: flex;
   }
 
@@ -22,13 +35,41 @@ CSS for laptop and desktop sized screens
     flex: 0 1 80%;
   }
 
+  /* Sidebar */
+  /* Sidebar - General */
+
   #sidebar {
     margin-left: 15px;
     flex: 0 1 20%;
   }
 
+  #recent-blog-posts, #latest-looks {
+    padding-bottom: 20px;
+  }
+
+  #recent-blog-posts h3, #latest-looks h3 {
+    font-size: 1.2em;
+    padding: 15px 0;
+  }
+
   #blog-post-list {
     flex-direction: column;
+    margin: 7.5px 0 12.5px;
+  }
+
+  .blog-snippet, .look-snippet {
+    margin: 7.5px 0;
+  }
+  
+  #latest-looks-list {
+    margin: 7.5px 0 12.5px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar-btn {
+    width: 90%;
+    margin: 0 auto;
   }
 
   /* Footer */

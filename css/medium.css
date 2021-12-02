@@ -1,11 +1,11 @@
 /* 
-CSS for tablet-sized screens
+Tablet-sized screens
 */
 
 @media only screen and (min-width: 768px) {
 
-  /* 1. Navigation Menu */
-  /* 1.1. Hiding Mobile Nav */
+  /* Navigation */
+  /* Hiding Mobile Nav */
 
   #nav-menu {
     display: none;
@@ -15,7 +15,8 @@ CSS for tablet-sized screens
     display: none;
   }
 
-  /* 1.2. Styles for responsive primary nav */
+  /* Navigation */
+  /* Responsive Primary Nav */
 
   #primary-nav-links {
     display: flex;
@@ -30,23 +31,50 @@ CSS for tablet-sized screens
     font-weight: 700;
     font-size: 1.5em;
     padding-left: 7%;
-    color: rgb(247,246,197);
+    color: rgb(247, 246, 197);
     text-shadow: -2px 2px black;
   }
 
-  /* 2. Main */
+  /* Main */
+  /* #page-heading */
+
+  #page-heading {
+    font-size: 3.83em;
+    padding: 40px 0;
+  }
+
+  /* index.html - #main-content */
+
+  /* Sidebar */
+  /* Sidebar - General */
+
+  #recent-blog-posts h3,
+  #latest-looks h3 {
+    font-size: 1.5em;
+  }
+
+  #recent-blog-posts {
+    padding-bottom: 15px;
+  }
+
+  #latest-looks {
+    padding-bottom: 35px;
+  }
+
+  /* Sidebar */
+  /* Sidebar - Recent Blog Posts */
 
   #blog-post-list {
     flex-direction: row;
     justify-content: space-between;
+    margin: 10px 0 32px;
   }
 
   .blog-snippet {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex: 0 1 32%;
-    margin: 10px 0;
+    flex: 0 1 31%;
     border-radius: 5px;
     background-color: #C6C5A6;
   }
@@ -64,7 +92,7 @@ CSS for tablet-sized screens
   }
 
   .blog-snippet-title-date {
-    margin: 0 0 auto 0;
+    margin: 0 0 auto;
   }
 
   .blog-snippet-title-date p:nth-child(2) {
@@ -80,7 +108,48 @@ CSS for tablet-sized screens
     font-size: 0.9em;
   }
 
-  /* 3. Footer */
+  /* Media Query to contain styles within tablet size */
+
+  @media only screen and (max-width: 1023px) {
+
+    /* Sidebar */
+    /* Sidebar - Latest Looks */
+
+    #latest-looks-list {
+      grid-template-columns: repeat(auto-fill, minmax(195px, 1fr));
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(195px, 1fr);
+      grid-gap: 15px;
+      overflow-x: auto;
+      padding: 0 10px;
+    }
+
+    .look-snippet {
+      margin: 0px 0 15px 0px;
+    }
+
+    /* Sidebar */
+    /* Sidebar - #latest-looks-list - Horizontal Scrollbar */
+
+    .visible-scroll::-webkit-scrollbar {
+      height: 7px;
+      background-color: rgba(72, 71, 36, .3);
+    }
+
+    .visible-scroll::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background-color: rgba(72, 71, 36, .8);
+      -webkit-box-shadow: 0 0 1px rgba(255, 255, 255);
+    }
+
+    .scrollbar-div-visible {
+      height: 7px;
+      width: 100%;
+    }
+
+  }
+
+  /* Footer */
 
   #footer-container {
     display: flex;
@@ -96,7 +165,8 @@ CSS for tablet-sized screens
     font-size: 1.05em;
   }
 
-  #footer-div-1, #footer-div-2 {
+  #footer-div-1,
+  #footer-div-2 {
     flex: 1 1 100%;
   }
 
@@ -111,9 +181,8 @@ CSS for tablet-sized screens
   #footer-div-3 p:first-child {
     padding: 0 12.5px 0 0;
   }
-  
+
   #footer-div-3 p:last-child {
     padding: 0 0 0 12.5px;
   }
-
 }
