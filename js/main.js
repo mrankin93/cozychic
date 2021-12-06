@@ -6,7 +6,7 @@ CSS Styles these classes to show or hide elements
 
 function toggleMenu() {
   if (app.xMenuButton.classList.contains("x-menu-hidden")) {
-    app.xMenuButton.classList.remove("x-menu-hidden"); 
+    app.xMenuButton.classList.remove("x-menu-hidden");
     app.xMenuText.classList.remove("x-menu-hidden");
     app.secondaryNav.classList.remove("secondary-nav-hidden");
     app.pageMain.classList.remove("close-secondary-nav");
@@ -37,7 +37,7 @@ Function detects clicks for main and footer elements with .close-secondary-nav
 
 for (let i = 0; i < app.clickOutsideNav.length; i++) {
   app.clickOutsideNav[i].addEventListener("click",
-    function hideSecondaryNav () {
+    function hideSecondaryNav() {
       app.xMenuButton.classList.add("x-menu-hidden");
       app.xMenuText.classList.add("x-menu-hidden");
       app.secondaryNav.classList.add("secondary-nav-hidden");
@@ -55,7 +55,7 @@ for (let i = 0; i < app.clickOutsideNav.length; i++) {
 Two different figcaptions display depending on screen width
 */
 
-window.onload = function() {
+window.onload = function () {
   if (window.matchMedia("(min-width: 768px)").matches) {
     app.coverCaption.innerHTML = `&ldquo;` + `Hayley reading a book` + `&rdquo;`;
   } else {
@@ -67,7 +67,7 @@ window.onload = function() {
 4. When window is resized, the figcaption will change at the 768px breakpoint
 */
 
-window.addEventListener("resize", function() {
+window.addEventListener("resize", function () {
   if (window.matchMedia("(min-width: 768px)").matches) {
     app.coverCaption.innerHTML = `&ldquo;` + `Hayley reading a book` + `&rdquo;`;
   } else {
@@ -83,3 +83,47 @@ document.addEventListener('mousemove', function checkHover() {
   const hovered = app.isHover(app.latestLooksList);
   hovered ? app.addScroll() : app.removeScroll();
 });
+
+/*
+6. Load and Hide Newsletter Popup
+*/
+
+function loadNewsletter() {
+  document.getElementById('newsletter-popup').style.display = "flex";
+  //document.getElementById('newsletter-popup-container').style.display = "flex";
+  //document.getElementById('newsletter-popup-content').style.display = "flex";
+}
+document.getElementById('newsletter-sign-up-load').onclick = loadNewsletter;
+
+function hideNewsletter() {
+  document.getElementById('newsletter-popup').style.display = "none";
+}
+document.getElementById('hide-popup').onclick = hideNewsletter;
+
+/* 
+7. Validating the email when the sign up button is clicked in the popup
+*/
+
+function newsSignup() {
+
+  let status = true;
+
+    for (i=0; i<document.getElementById('validate-email').length; i++) {
+        document.getElementById('validate-email').innerHTML = "";
+        document.getElementById('email-text-field').classList.remove('error');
+    }
+
+  x = document.forms.newslettersignup.email.value;
+      if (x === null || x === '') {
+          status = false;
+          document.getElementById('validate-email').innerHTML = `*please enter a valid email`;
+          document.getElementById('email-text-field').classList.add('error');
+      }
+
+      return status;
+}
+
+let submitBtn = document.getElementById('signup-click');
+
+submitBtn.onclick = newsSignup;
+
