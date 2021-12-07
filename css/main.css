@@ -51,6 +51,8 @@ header {
   background-color: rgb(72, 71, 36);
   border-bottom: 2px solid rgb(247, 246, 197);
   height: 100px;
+  height: 20vw;
+  max-height: 100px;
   position: sticky;
   z-index: 2;
   top: 0;
@@ -74,7 +76,9 @@ header {
 
 #logo img {
   padding: 0 16px;
-  height: 99px;
+  /* height: 99px; */
+  height: 20vw;
+  max-height: 100px;
 }
 
 /* Navigation Styles */
@@ -564,6 +568,8 @@ main {
   background-color: rgba(50, 50, 50, 0.5);
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 450;
   width: 100%;
   height: 100%;
@@ -579,6 +585,8 @@ main {
   background-color: #FFFFF9;
   height: 100vw;
   width: 100%;
+  max-width: 500px;
+  max-height: 500px;
   margin: 0;
   /* position: relative; */
   /* top: 0; */
@@ -648,30 +656,20 @@ main {
   margin: 0 15px 20px 15px;
 }
 
-#validate-email {
-  font-size: .8em;
-  margin: 0 auto 3px auto;
-  display: block;
-  text-align: left;
-  height: 12px;
-}
-
 #signup-input-wrapper {
   margin: 0 auto 0 auto;
-  /* text-align: center;
-  align-self: center; */
+  /* text-align: center; */
+  /* align-self: center; */
   display: inline-block;
-  width: 100%;
+  /* width: 100%; */
 }
 
 #email-text-field {
-  padding: 10px 10px 10px 10px;
-  width: 160px;
-  /* border: 1px solid red; */
+  padding: 10px 20px 10px 10px;
+  width: 170px;
 }
 
 #email-text-field:focus {
-  /* outline: 1px solid red; */
   outline:none; 
      border: 1px solid #4D90FE;
      -webkit-box-shadow: 0px 0px 5px  #4D90FE;
@@ -682,14 +680,12 @@ main {
   border: 1px solid #fe4d4d;
      -webkit-box-shadow: 0px 0px 5px  #fe4d4d;
      box-shadow: 0px 0px 5px  #fe4d4d;
-     animation: shake 0.2s ease-in-out 0s 2;
 }
 
-@keyframes shake {
-  0% { margin-left: 0rem; }
-  25% { margin-left: 2px; }
-  75% { margin-left: -2px; }
-  100% { margin-left: 0rem; }
+#email-text-field.correct {
+  border: 1px solid green;
+     -webkit-box-shadow: 0px 0px 5px green;
+     box-shadow: 0px 0px 5px green;
 }
 
 .signup-btn-popup {
@@ -714,7 +710,7 @@ main {
   }
 
   #email-text-field {
-    padding: 7px;
+    padding: 7px 20px 7px 7px;
     width: 130px;
     font-size: 4vw;
   }

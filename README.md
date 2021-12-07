@@ -13,7 +13,7 @@
 <br>
 
 <div align="center">
-  <div><a href="https://github.com/mrankin93/cozychic"><img src="img/logos/logo_main.jpg" width="300"></a>
+  <div><a href="https://github.com/mrankin93/cozychic"><img src="img/logos/header-logo.jpg" width="300"></a>
   </div>
   <h3 style="font-weight: bold">cozychic</h3>
     <p style="font-style: italic"> A website for Hayley Rankin </p>
@@ -38,9 +38,9 @@
 
 <h2 style="font-weight: bold" id="about-the-project">About</h2>
 
-<br>
+<!-- <br>
 <div align="center"><img src="https://via.placeholder.com/300"></div>
-<br>
+<br> -->
 
 <p>cozychic is a website for my wife to share her blog entries and photos. It's designed to be an extension of her social media presence and act as a central location to share content with her followers.</p>
 <br>

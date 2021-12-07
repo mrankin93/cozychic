@@ -90,8 +90,6 @@ document.addEventListener('mousemove', function checkHover() {
 
 function loadNewsletter() {
   document.getElementById('newsletter-popup').style.display = "flex";
-  //document.getElementById('newsletter-popup-container').style.display = "flex";
-  //document.getElementById('newsletter-popup-content').style.display = "flex";
 }
 document.getElementById('newsletter-sign-up-load').onclick = loadNewsletter;
 
@@ -100,30 +98,27 @@ function hideNewsletter() {
 }
 document.getElementById('hide-popup').onclick = hideNewsletter;
 
+
 /* 
-7. Validating the email when the sign up button is clicked in the popup
+7. Email Input Border turns green or red if value matches pattern below
 */
 
-function newsSignup() {
+const validateEmail = (email) => {
+  return email.match(
+    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  );
+};
 
-  let status = true;
+const validate = () => {
+  const email = $('#email-text-field').val();
+  document.getElementById('email-text-field').classList.remove('error');
+  document.getElementById('email-text-field').classList.remove('correct');
 
-    for (i=0; i<document.getElementById('validate-email').length; i++) {
-        document.getElementById('validate-email').innerHTML = "";
-        document.getElementById('email-text-field').classList.remove('error');
-    }
-
-  x = document.forms.newslettersignup.email.value;
-      if (x === null || x === '') {
-          status = false;
-          document.getElementById('validate-email').innerHTML = `*please enter a valid email`;
-          document.getElementById('email-text-field').classList.add('error');
-      }
-
-      return status;
+  if (validateEmail(email)) {
+    document.getElementById('email-text-field').classList.add('correct');
+  } else {
+    document.getElementById('email-text-field').classList.add('error');
+  }
 }
 
-let submitBtn = document.getElementById('signup-click');
-
-submitBtn.onclick = newsSignup;
-
+$('#email-text-field').on('input', validate);
