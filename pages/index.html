@@ -77,14 +77,44 @@
               <!-- TWO DIFFERENT PICTURES FOR DIFFERENT SCREEN SIZES -->
               <picture id="cover-picture">
                 <source media="(min-width:768px)" srcset="../img/content/coverpic-desktop-1080x2.jpg" width=100%>
-                <source media="(min-width:375px)" srcset="../img/content/coverpic-mobile-1080x1.jpg" width=100%>
+                <source media="(min-width:280px)" srcset="../img/content/coverpic-mobile-1080x1.jpg" width=100%>
                 <img src="../img/content/coverpic-mobile-1080x1.jpg" alt="Hayley posing for a picture"
                   title="Hayley posing for a picture">
               </picture>
               <figcaption id="cover-caption"></figcaption>
             </figure>
           </section>
-        </section>
+        
+        <aside id="newsletter">
+          <section id="newsletter-signup-border">
+            <div id="newsletter-signup-content">
+              <h1>Newsletter</h1>
+              <p>Get new blog entries and stylish looks straight to your inbox.</p>
+              <input type="submit" class="signup-btn" name="submit" id="newsletter-sign-up-load" value="Sign Up">
+            </div>
+          </section>
+          <section id="newsletter-popup">
+            <div id="newsletter-popup-border">
+              <div id="newsletter-popup-content">
+                <button id="hide-popup">&#10005;</button>
+                <div id="newsletter-popup-text">
+                  <h1>Sign up to my Newsletter</h1>
+                  <p>to get the newest blog entries and stylish looks sent to your inbox.</p>
+                    <form name="newslettersignup" action="../pages/contact.html" method="post" onsubmit="return val/idateForm()">
+                      <div id="signup-input-wrapper">
+                      <span id="validate-email" class="email-error"></span>
+                      <label for="email"><input type="email" id="email-text-field" class="signup-email" name="email" placeholder="Enter Your Email..."></label>
+                      <input type="submit" id="signup-click" class="signup-btn signup-btn-popup" name="submit" value="Sign Up">
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            
+          </section>
+        </aside>
+      </section>
+        
         <!-- SIDEBAR -->
         <aside id="sidebar">
           <!-- SIDEBAR - RECENT BLOG POSTS -->
