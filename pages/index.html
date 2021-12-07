@@ -26,7 +26,7 @@
     <div id="header-content">
       <!-- HEADER LOGO TOP LEFT -->
       <div id="logo">
-        <a href="../pages/index.html"><img src="../img/logos/logo_main.jpg" alt="cozychic logo"></a>
+        <a href="../pages/index.html"><img src="../img/logos/header-logo.jpg" alt="cozychic logo"></a>
       </div>
       <!-- PRIMARY NAV -->
       <nav id="primary-nav">
@@ -76,9 +76,10 @@
             <figure>
               <!-- TWO DIFFERENT PICTURES FOR DIFFERENT SCREEN SIZES -->
               <picture id="cover-picture">
-                <source media="(min-width:768px)" srcset="../img/content/coverpic-desktop-1080x2.jpg" width=100%>
-                <source media="(min-width:280px)" srcset="../img/content/coverpic-mobile-1080x1.jpg" width=100%>
-                <img src="../img/content/coverpic-mobile-1080x1.jpg" alt="Hayley posing for a picture"
+                <source media="(min-width:1441px)" srcset="../img/content/2x-hayley-book.jpg, ../img/content/4x-hayley-book.jpg 2x" width=100%>
+                <source media="(min-width:768px)" srcset="../img/content/1x-hayley-book.jpg, ../img/content/2x-hayley-book.jpg 2x" width=100%>
+                <source media="(min-width:280px)" srcset="../img/content/1x-hayley-teacup.jpg, ../img/content/2x-hayley-teacup.jpg 2x" width=100%>
+                <img src="../img/content/1x-hayley-teacup.jpg" alt="Hayley posing for a picture"
                   title="Hayley posing for a picture">
               </picture>
               <figcaption id="cover-caption"></figcaption>
@@ -100,17 +101,15 @@
                 <div id="newsletter-popup-text">
                   <h1>Sign up to my Newsletter</h1>
                   <p>to get the newest blog entries and stylish looks sent to your inbox.</p>
-                    <form name="newslettersignup" action="../pages/contact.html" method="post" onsubmit="return val/idateForm()">
+                    <form id="newsletter-form" name="newslettersignup" action="index.html">
                       <div id="signup-input-wrapper">
-                      <span id="validate-email" class="email-error"></span>
-                      <label for="email"><input type="email" id="email-text-field" class="signup-email" name="email" placeholder="Enter Your Email..."></label>
-                      <input type="submit" id="signup-click" class="signup-btn signup-btn-popup" name="submit" value="Sign Up">
+                        <label for="email"><input type="email" id="email-text-field" name="email" placeholder="Enter Your Email..." required></label>
+                        <input type="submit" class="signup-btn signup-btn-popup" name="submit" value="Sign Up">
                       </div>
                     </form>
                   </div>
                 </div>
               </div>
-            
           </section>
         </aside>
       </section>
@@ -125,7 +124,7 @@
             <div id="blog-post-list">
               <!-- BLOG SNIPPET 1 -->
               <div class="blog-snippet">
-                <div class="blog-snippet-thumbnail"><img src="../img/thumbnails/square-540-1.jpg"
+                <div class="blog-snippet-thumbnail"><img srcset="../img/thumbnails/2x-blog-thumb-1.jpg 2x" src="../img/thumbnails/1x-blog-thumb-1.jpg"
                     alt="Thumbnail for blog post 1"></div>
                 <div class="blog-snippet-content">
                   <div class="blog-snippet-title-date">
@@ -138,7 +137,7 @@
               </div>
               <!-- BLOG SNIPPET 2 -->
               <div class="blog-snippet">
-                <div class="blog-snippet-thumbnail"><img src="../img/thumbnails/square-540-2.jpg"
+                <div class="blog-snippet-thumbnail"><img srcset="../img/thumbnails/2x-blog-thumb-2.jpg 2x" src="../img/thumbnails/1x-blog-thumb-2.jpg"
                     alt="Thumbnail for blog post 2"></div>
                 <div class="blog-snippet-content">
                   <div class="blog-snippet-title-date">
@@ -151,7 +150,7 @@
               </div>
               <!-- BLOG SNIPPET 3 -->
               <div class="blog-snippet">
-                <div class="blog-snippet-thumbnail"><img src="../img/thumbnails/square-540-3.jpg"
+                <div class="blog-snippet-thumbnail"><img srcset="../img/thumbnails/2x-blog-thumb-3.jpg 2x" src="../img/thumbnails/1x-blog-thumb-3.jpg"
                     alt="Thumbnail for blog post 3"></div>
                 <div class="blog-snippet-content">
                   <div class="blog-snippet-title-date">
@@ -175,25 +174,25 @@
             <div id="latest-looks-list" class="">
               <!-- LOOK SNIPPET 1 -->
               <div class="look-snippet">
-                <img class="look-snippet-thumbnail" src="../img/portraits/portrait-11.jpg"
-                  alt="Hayley wearing a yellow dress">
+                <img class="look-snippet-thumbnail" srcset="../img/portraits/2x-portrait-11.jpg 2x" src="../img/portraits/portrait-11.jpg"
+                  alt="Hayley wearing a yellow dress" >
                 <p class="look-snippet-date">Snapped on: <time datetime="2021-11-25">11/25/21</time></p>
               </div>
               <!-- LOOK SNIPPET 2 -->
               <div class="look-snippet">
-                <img class="look-snippet-thumbnail" src="../img/portraits/portrait-10.jpg"
+                <img class="look-snippet-thumbnail" srcset="../img/portraits/2x-portrait-10.jpg 2x" src="../img/portraits/portrait-10.jpg"
                   alt="Hayley wearing a navy cardigan">
                 <p class="look-snippet-date">Snapped on: <time datetime="2021-11-20">11/20/21</time></p>
               </div>
               <!-- LOOK SNIPPET 3 -->
               <div class="look-snippet">
-                <img class="look-snippet-thumbnail" src="../img/portraits/portrait-09.jpg"
+                <img class="look-snippet-thumbnail" srcset="../img/portraits/2x-portrait-09.jpg 2x" src="../img/portraits/portrait-09.jpg"
                   alt="Hayley wearing a black blouse">
                 <p class="look-snippet-date">Snapped on: <time datetime="2021-11-17">11/17/21</time></p>
               </div>
               <!-- LOOK SNIPPET 4 -->
               <div class="look-snippet">
-                <img class="look-snippet-thumbnail" src="../img/portraits/portrait-08.jpg"
+                <img class="look-snippet-thumbnail" srcset="../img/portraits/2x-portrait-08.jpg 2x" src="../img/portraits/portrait-08.jpg"
                   alt="Hayley wearing a red jacket outside">
                 <p class="look-snippet-date">Snapped on: <time datetime="2021-11-17">11/17/21</time></p>
               </div>
@@ -242,6 +241,7 @@
     </div>
   </footer>
   <!-- SCRIPTS LINKED HERE -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="../js/app.js"></script>
   <script src="../js/main.js"></script>
 </body>

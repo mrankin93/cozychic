@@ -108,7 +108,7 @@ Tablet-sized screens
     font-size: 0.9em;
   }
 
-  /* Media Query to contain styles within tablet size */
+  /* Media Query to contain the following sidebar styles within tablet size only */
 
   @media only screen and (max-width: 1023px) {
 
