@@ -35,20 +35,30 @@ app.navMenu.onclick = toggleMenu;
 Function detects clicks for main and footer elements with .close-secondary-nav
 */
 
-for (let i = 0; i < app.clickOutsideNav.length; i++) {
-  app.clickOutsideNav[i].addEventListener("click",
-    function hideSecondaryNav() {
-      app.xMenuButton.classList.add("x-menu-hidden");
-      app.xMenuText.classList.add("x-menu-hidden");
-      app.secondaryNav.classList.add("secondary-nav-hidden");
-      app.pageMain.classList.add("close-secondary-nav");
-      app.pageFooter.classList.add("close-secondary-nav");
-      app.navMenuText.classList.remove("nav-menu-hidden");
-      app.navMenuButton.classList.remove("nav-menu-hidden");
-      app.pageMain.classList.remove("second-nav-open");
-      app.pageFooter.classList.remove("second-nav-open");
-    });
+// Defines what hideSecondaryNav does
+function hideSecondaryNav() {
+  app.xMenuButton.classList.add("x-menu-hidden");
+  app.xMenuText.classList.add("x-menu-hidden");
+  app.secondaryNav.classList.add("secondary-nav-hidden");
+  app.pageMain.classList.add("close-secondary-nav");
+  app.pageFooter.classList.add("close-secondary-nav");
+  app.navMenuText.classList.remove("nav-menu-hidden");
+  app.navMenuButton.classList.remove("nav-menu-hidden");
+  app.pageMain.classList.remove("second-nav-open");
+  app.pageFooter.classList.remove("second-nav-open");
 }
+
+// Calls hideSecondaryNav when main/footer are clicked
+for (let i = 0; i < app.clickOutsideNav.length; i++) {
+  app.clickOutsideNav[i].addEventListener("click", hideSecondaryNav);
+}
+
+// Calls hideSecondaryNav when window reaches tablet sized screens
+window.addEventListener("resize", function () {
+  if (window.matchMedia("(min-width: 768px)").matches) {
+    hideSecondaryNav();
+  } 
+})
 
 /*
 3. When page is loaded, different figcaptions appear with the cover picture in index.html

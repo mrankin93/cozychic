@@ -34,7 +34,7 @@ Laptops and desktop sized screens
 
   #main-content {
     margin-right: 30px;
-    flex: 0 1 75%;
+    flex: 0 1 80%;
   }
 
   /* Sidebar */
@@ -42,14 +42,14 @@ Laptops and desktop sized screens
 
   #sidebar {
     margin-left: 30px;
-    flex: 0 1 25%;
+    flex: 0 1 20%;
   }
 
   #recent-blog-posts, #latest-looks {
     padding-bottom: 20px;
   }
 
-  #recent-blog-posts h3, #latest-looks h3 {
+  #recent-blog-posts h2, #latest-looks h2 {
     font-size: 1.2em;
     padding: 15px 0;
   }
@@ -101,8 +101,12 @@ Laptops and desktop sized screens
   }
 }
 
+/* Some specific styles for larger laptops and desktops */
+
 @media only screen and (min-width: 1441px) {
   
+  /* Header */
+
   header {
     max-height: 200px;
     max-height: 7vw;
@@ -117,9 +121,13 @@ Laptops and desktop sized screens
     max-height: 7vw;
   }
 
+  /* Navigation */
+
   #primary-nav-links li {
     font-size: 2vw;
   }
+
+  /* Main */
 
   #main-container {
     max-width: 85%;
@@ -129,6 +137,8 @@ Laptops and desktop sized screens
     font-size: 5vw;
     padding: 100px 0;
   }
+
+  /* Sidebar */
 
   .blog-snippet, .look-snippet {
     margin: 15px 0;
