@@ -46,7 +46,7 @@
       </nav>
     </div>
   </header>
-  <!-- DROPDOWN MENU -->
+  <!-- DROPDOWN MOBILE MENU -->
   <nav id="secondary-nav" class="secondary-nav-hidden">
     <ul>
       <a href="../pages/looks.html">
@@ -61,20 +61,21 @@
     </ul>
     <div id="grey-out-div" class="close-secondary-nav"></div>
   </nav>
-  <!-- MAIN SECTION -->
+  <!-- MAIN SECTION - Contains #main-container -->
   <main id="page-main" class="close-secondary-nav">
-    <!-- DIVIDER SETS MAIN MAX-WIDTH & SPLITS MAIN CONTENT FROM ASIDE -->
+    <!-- Divider controls maximum content width -->
     <div id="main-container">
       <!-- WEBSITE HEADING -->
       <h1 id="page-heading">Simple Living &bull; Timeless Style</h1>
-      <!-- SECTION FOR MAIN CONTENT -->
+      <!-- #main-aside separates #main-content & #sidebar at desktop size  -->
       <div id="main-aside">
+        <!-- Contains #cover & #newsletter -->
         <section id="main-content">
-          <!-- 1ST SECTION OF MAIN CONTENT FOR HOME PAGE -->
+          <!-- 1ST SECTION OF CONTENT FOR INDEX.HTML -->
           <section id="cover">
-            <!-- COVER PICTURE FOR WEBSITE HOME -->
+            <!-- COVER PICTURE FOR INDEX.HTML -->
             <figure>
-              <!-- TWO DIFFERENT PICTURES FOR DIFFERENT SCREEN SIZES -->
+              <!-- DIFFERENT IMAGES FOR DIFFERENT SCREEN SIZES -->
               <picture id="cover-picture">
                 <source media="(min-width:1441px)" srcset="../img/content/2x-hayley-book.jpg, ../img/content/4x-hayley-book.jpg 2x" width=100%>
                 <source media="(min-width:768px)" srcset="../img/content/1x-hayley-book.jpg, ../img/content/2x-hayley-book.jpg 2x" width=100%>
@@ -85,123 +86,120 @@
               <figcaption id="cover-caption"></figcaption>
             </figure>
           </section>
-        
-        <aside id="newsletter">
-          <section id="newsletter-signup-border">
-            <div id="newsletter-signup-content">
-              <h1>Newsletter</h1>
-              <p>Get new blog entries and stylish looks straight to your inbox.</p>
-              <input type="submit" class="signup-btn" name="submit" id="newsletter-sign-up-load" value="Sign Up">
-            </div>
-          </section>
-          <section id="newsletter-popup">
-            <div id="newsletter-popup-border">
-              <div id="newsletter-popup-content">
-                <button id="hide-popup">&#10005;</button>
-                <div id="newsletter-popup-text">
-                  <h1>Sign up to my Newsletter</h1>
-                  <p>to get the newest blog entries and stylish looks sent to your inbox.</p>
-                    <form id="newsletter-form" name="newslettersignup" action="index.html">
-                      <div id="signup-input-wrapper">
-                        <label for="email"><input type="email" id="email-text-field" name="email" placeholder="Enter Your Email..." required></label>
-                        <input type="submit" class="signup-btn signup-btn-popup" name="submit" value="Sign Up">
-                      </div>
-                    </form>
+          <aside id="newsletter">
+            <section id="newsletter-signup-border">
+              <div id="newsletter-signup-content">
+                <h2>Newsletter</h2>
+                <p>Get new blog entries and stylish looks straight to your inbox.</p>
+                <input type="submit" class="signup-btn" name="submit" id="newsletter-sign-up-load" value="Sign Up">
+              </div>
+            </section>
+            <section id="newsletter-popup">
+              <div id="newsletter-popup-border">
+                <div id="newsletter-popup-content">
+                  <button id="hide-popup">&#10005;</button>
+                  <div id="newsletter-popup-text">
+                    <h2>Sign up to my Newsletter</h2>
+                    <p>to get the newest blog entries and stylish looks sent to your inbox.</p>
+                      <form name="newslettersignup" action="index.html">
+                        <div id="signup-input-wrapper">
+                          <label for="email"><input type="email" id="email-text-field" name="email" placeholder="Enter Your Email..." required></label>
+                          <input type="submit" class="signup-btn signup-btn-popup" name="submit" value="Sign Up">
+                        </div>
+                      </form>
+                    </div>
                   </div>
                 </div>
-              </div>
-          </section>
-        </aside>
-      </section>
+            </section>
+          </aside>
+        </section>
         
         <!-- SIDEBAR -->
         <aside id="sidebar">
           <!-- SIDEBAR - RECENT BLOG POSTS -->
           <section id="recent-blog-posts">
-            <h3>Recent Blog Posts</h3>
+            <h2>Recent Blog Posts</h2>
             <hr>
             <!-- LIST OF BLOG POST SNIPPETS -->
             <div id="blog-post-list">
               <!-- BLOG SNIPPET 1 -->
               <div class="blog-snippet">
-                <div class="blog-snippet-thumbnail"><img srcset="../img/thumbnails/2x-blog-thumb-1.jpg 2x" src="../img/thumbnails/1x-blog-thumb-1.jpg"
-                    alt="Thumbnail for blog post 1"></div>
+                <div class="blog-snippet-thumbnail">
+                  <img srcset="../img/thumbnails/2x-blog-thumb-1.jpg 2x" src="../img/thumbnails/1x-blog-thumb-1.jpg" alt="Thumbnail for blog post 1">
+                </div>
                 <div class="blog-snippet-content">
                   <div class="blog-snippet-title-date">
-                    <p>Title of blog post</p>
-                    <p>Posted: <time datetime="2021-11-22">11/22/21</time>
-                    </p>
+                    <h3>Title of blog post</h3>
+                    <p>Posted: <time datetime="2021-11-22">11/22/21</time></p>
                   </div>
                   <p class="blog-snippet-read-more"><a href="#">Read more</a></p>
                 </div>
               </div>
               <!-- BLOG SNIPPET 2 -->
               <div class="blog-snippet">
-                <div class="blog-snippet-thumbnail"><img srcset="../img/thumbnails/2x-blog-thumb-2.jpg 2x" src="../img/thumbnails/1x-blog-thumb-2.jpg"
-                    alt="Thumbnail for blog post 2"></div>
+                <div class="blog-snippet-thumbnail">
+                  <img srcset="../img/thumbnails/2x-blog-thumb-2.jpg 2x" src="../img/thumbnails/1x-blog-thumb-2.jpg" alt="Thumbnail for blog post 2">
+                </div>
                 <div class="blog-snippet-content">
                   <div class="blog-snippet-title-date">
-                    <p>Title of blog post which is quite long</p>
-                    <p>Posted: <time datetime="2021-11-22">11/22/21</time>
-                    </p>
+                    <h3>Title of blog post which is quite long</h3>
+                    <p>Posted: <time datetime="2021-11-22">11/22/21</time></p>
                   </div>
                   <p class="blog-snippet-read-more"><a href="#">Read more</a></p>
                 </div>
               </div>
               <!-- BLOG SNIPPET 3 -->
               <div class="blog-snippet">
-                <div class="blog-snippet-thumbnail"><img srcset="../img/thumbnails/2x-blog-thumb-3.jpg 2x" src="../img/thumbnails/1x-blog-thumb-3.jpg"
-                    alt="Thumbnail for blog post 3"></div>
+                <div class="blog-snippet-thumbnail">
+                  <img srcset="../img/thumbnails/2x-blog-thumb-3.jpg 2x" src="../img/thumbnails/1x-blog-thumb-3.jpg" alt="Thumbnail for blog post 3">
+                </div>
                 <div class="blog-snippet-content">
                   <div class="blog-snippet-title-date">
-                    <p>Title of blog post</p>
-                    <p>Posted: <time datetime="2021-11-22">11/22/21</time>
-                    </p>
+                    <h3>Title of blog post</h3>
+                    <p>Posted: <time datetime="2021-11-22">11/22/21</time></p>
                   </div>
                   <p class="blog-snippet-read-more"><a href="#">Read more</a></p>
                 </div>
               </div>
             </div>
             <!-- BUTTON - See all posts -->
-            <div class="sidebar-btn"><a href="../pages/blog.html"><button class="btn-style btn-color">See all
-                  posts</button></a></div>
+            <div class="sidebar-btn">
+              <a href="../pages/blog.html"><button class="btn-style btn-color">See all posts</button></a>
+            </div>
           </section>
           <!-- SIDEBAR - RECENT LOOKS -->
           <section id="latest-looks">
-            <h3>Latest Looks</h3>
+            <h2>Latest Looks</h2>
             <hr>
             <!-- LIST OF LOOK SNIPPETS -->
             <div id="latest-looks-list" class="">
               <!-- LOOK SNIPPET 1 -->
               <div class="look-snippet">
-                <img class="look-snippet-thumbnail" srcset="../img/portraits/2x-portrait-11.jpg 2x" src="../img/portraits/portrait-11.jpg"
-                  alt="Hayley wearing a yellow dress" >
+                <img class="look-snippet-thumbnail" srcset="../img/portraits/2x-portrait-11.jpg 2x" src="../img/portraits/portrait-11.jpg" alt="Hayley wearing a yellow dress" >
                 <p class="look-snippet-date">Snapped on: <time datetime="2021-11-25">11/25/21</time></p>
               </div>
               <!-- LOOK SNIPPET 2 -->
               <div class="look-snippet">
-                <img class="look-snippet-thumbnail" srcset="../img/portraits/2x-portrait-10.jpg 2x" src="../img/portraits/portrait-10.jpg"
-                  alt="Hayley wearing a navy cardigan">
+                <img class="look-snippet-thumbnail" srcset="../img/portraits/2x-portrait-10.jpg 2x" src="../img/portraits/portrait-10.jpg" alt="Hayley wearing a navy cardigan">
                 <p class="look-snippet-date">Snapped on: <time datetime="2021-11-20">11/20/21</time></p>
               </div>
               <!-- LOOK SNIPPET 3 -->
               <div class="look-snippet">
-                <img class="look-snippet-thumbnail" srcset="../img/portraits/2x-portrait-09.jpg 2x" src="../img/portraits/portrait-09.jpg"
-                  alt="Hayley wearing a black blouse">
+                <img class="look-snippet-thumbnail" srcset="../img/portraits/2x-portrait-09.jpg 2x" src="../img/portraits/portrait-09.jpg" alt="Hayley wearing a black blouse">
                 <p class="look-snippet-date">Snapped on: <time datetime="2021-11-17">11/17/21</time></p>
               </div>
               <!-- LOOK SNIPPET 4 -->
               <div class="look-snippet">
-                <img class="look-snippet-thumbnail" srcset="../img/portraits/2x-portrait-08.jpg 2x" src="../img/portraits/portrait-08.jpg"
-                  alt="Hayley wearing a red jacket outside">
+                <img class="look-snippet-thumbnail" srcset="../img/portraits/2x-portrait-08.jpg 2x" src="../img/portraits/portrait-08.jpg" alt="Hayley wearing a red jacket outside">
                 <p class="look-snippet-date">Snapped on: <time datetime="2021-11-17">11/17/21</time></p>
               </div>
             </div>
             <!-- SCROLLBAR DIV - When scrollbar isn't present -->
             <div id="scrollbar-div" class="scrollbar-div-visible"></div>
             <!-- BUTTON - See all looks -->
-            <div class="sidebar-btn"><a href="../pages/looks.html"><button class="btn-style btn-color">See all
-                  looks</button></a></div>
+            <div class="sidebar-btn">
+              <a href="../pages/looks.html"><button class="btn-style btn-color">See all looks</button></a>
+            </div>
           </section>
         </aside>
       </div>

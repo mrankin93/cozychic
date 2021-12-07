@@ -43,13 +43,11 @@ Tablet-sized screens
     padding: 40px 0;
   }
 
-  /* index.html - #main-content */
-
   /* Sidebar */
   /* Sidebar - General */
 
-  #recent-blog-posts h3,
-  #latest-looks h3 {
+  #recent-blog-posts h2,
+  #latest-looks h2 {
     font-size: 1.5em;
   }
 
@@ -87,25 +85,12 @@ Tablet-sized screens
   .blog-snippet-content {
     display: flex;
     flex-direction: column;
-    flex-basis: 100%;
+    /* flex-basis: 100%; */
     margin: 10px 8px;
   }
 
   .blog-snippet-title-date {
     margin: 0 0 auto;
-  }
-
-  .blog-snippet-title-date p:nth-child(2) {
-    font-size: .9em;
-    font-style: italic;
-    margin: 15px 0;
-  }
-
-  .blog-snippet-read-more {
-    margin: 0;
-    text-decoration: underline;
-    text-align: center;
-    font-size: 0.9em;
   }
 
   /* Media Query to contain the following sidebar styles within tablet size only */
@@ -154,7 +139,6 @@ Tablet-sized screens
   #footer-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
   }
 
   #footer-container h3 {
@@ -178,11 +162,8 @@ Tablet-sized screens
     font-size: .8em;
   }
 
-  #footer-div-3 p:first-child {
-    padding: 0 12.5px 0 0;
+  #footer-div-3 p  {
+    padding: 0 12.5px;
   }
 
-  #footer-div-3 p:last-child {
-    padding: 0 0 0 12.5px;
-  }
 }
