@@ -585,6 +585,8 @@ main {
   margin: 15px 15px 25px;
   letter-spacing: .05em;
   font-size: 1.75em;
+  font-weight: normal;
+  text-shadow: -1.5px 1.5px 1px #ad966a;
 }
 
 #newsletter-popup-text p {
@@ -627,6 +629,36 @@ main {
   margin: 0 0 0 -3px;
   border-radius: 0;
   padding: 12px 20px 10px 20px;
+}
+
+/* Back to Top Button */
+
+#top-style {
+  display: block;
+  width: 65px;
+  height: 65px;
+  font-size: 3em;
+  margin: 0 auto 25px;
+  cursor: pointer;
+  border: none;
+  color: rgb(72, 71, 36);
+  background-image: linear-gradient(to right, rgb(198, 197, 166), rgb(198, 197, 166), rgb(72, 71, 36), rgb(72, 71, 36));
+  background-size: 300% 100%;
+  border-radius: 50px;
+  box-shadow: -2px 5px 15px 0px rgba(72, 71, 36, .75);
+  transition: all .5s ease-in-out;
+  moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+}
+
+#top-style:hover {
+  background-position: 100% 0;
+  color: rgb(198, 197, 166);
+  transition: all .5s ease-in-out;
+  moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
 }
 
 /* Footer */
@@ -744,6 +776,12 @@ footer {
 
 @media only screen and (max-width: 350px) {
 
+  /* Smaller text for multiple elements */
+
+  #secondary-nav ul li, #cover-caption, .blog-snippet-title-date h3, .look-snippet-date, .sidebar-btn, #newsletter-signup-content p, #newsletter-popup-text p {
+    font-size: .8em;
+  }
+
   /* Mobile Nav Button */
 
   #nav-menu {
@@ -770,7 +808,7 @@ footer {
     margin: 5px 0 -15px -1.5px;
   }
 
-  /* Sidebar - Blog Snippets */
+  /* Sidebar - Blog/Look Snippets */
 
   .blog-snippet-thumbnail {
     flex: 0 1 50%;
@@ -782,33 +820,39 @@ footer {
     margin: 10px 5px;
   }
 
+  .blog-snippet-title-date h3 {
+    margin-bottom: 10px;
+  }
+
+  .blog-snippet-title-date p, .blog-snippet-read-more {
+    font-size: .6em;
+  }
+
   /* Newsletter Section */
 
   #newsletter-popup-text h2 {
-    font-size: 7vw;
-  }
-
-  #newsletter-popup-text p {
-    font-size: 4vw;
-  }
-
-  #signup-input-wrapper {
-    margin: 0 auto;
-    display: inline-block;
+    font-size: 1.5em;
   }
 
   #email-text-field {
     padding: 7px;
     width: 130px;
-    font-size: 4vw;
+    font-size: .7em;
   }
 
   .signup-btn-popup {
     margin: 0 0 0 -3px;
     border-radius: 0 10px 10px 0;
     padding: 9px 16px 7px;
-    font-size: .8em;
-    font-size: 4vw;
+    font-size: .7em;
+  }
+
+  /* Back to Top Button */
+
+  #top-style {
+    height: 45px;
+    width: 45px;
+    font-size: 2em;
   }
 
   /* Footer */
