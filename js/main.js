@@ -132,3 +132,14 @@ const validate = () => {
 }
 
 $('#email-text-field').on('input', validate);
+
+/* 
+8. Back to top scroll animation
+*/
+
+$(document).ready(function() {
+  
+  $('#top-style').click(function() {
+  $("html, body").animate({scrollTop: 0}, 500);
+  });
+});
