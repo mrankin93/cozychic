@@ -7,18 +7,19 @@ Mobile sized screens
 
 * {
   box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
 }
 
 html {
+  text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
   line-height: 1;
 }
 
 body {
   font-size: 16px;
+  text-align: center;
   font-family: 'Playfair Display', serif;
   background-color: white;
 }
@@ -27,19 +28,20 @@ ul {
   list-style-type: none;
 }
 
-a {
+a, #nav-menu, #secondary-nav ul li {
   text-decoration: none;
   color: inherit;
+  transition: all .5s ease-in;
 }
 
-a:hover,
-li a:hover,
-#secondary-nav a:hover,
-#nav-menu:hover p,
-#nav-menu:hover button,
-#primary-nav-links li a:hover {
+a:hover, #nav-menu:hover, #secondary-nav ul li:hover {
   color: rgb(255, 242, 126);
-  transition: color 0.5s ease-in-out;
+  transition: all .5s ease;
+  cursor: pointer;
+}
+
+button, .signup-btn-popup {
+  cursor: pointer;
 }
 
 /* Header Styles */
@@ -52,6 +54,8 @@ header {
   position: sticky;
   z-index: 2;
   top: 0;
+  color:rgb(247, 246, 197);
+  text-shadow: -2px 2px 1px black;
 }
 
 #header-content {
@@ -75,7 +79,6 @@ header {
 
 header nav {
   width: 100%;
-  text-align: center;
   display: flex;
   justify-content: flex-end;
 }
@@ -89,39 +92,33 @@ header nav {
 #nav-menu-text {
   font-size: .8em;
   margin: 0 0 -15px -1px;
-  color: rgb(247, 246, 197);
-  cursor: pointer;
-  text-shadow: -2px 2px 1px black;
 }
 
 #nav-menu-button {
   background: none;
   border: none;
   font-size: 3em;
-  cursor: pointer;
-  color: rgb(247, 246, 197);
+  cursor: inherit;
+  color: inherit;
   margin: 0 0 -5px -1px;
   padding: 0;
-  text-shadow: -2px 2px 1px black;
+  text-shadow: inherit;
 }
 
 #x-menu-button {
   background: none;
   border: none;
   font-size: 3em;
-  cursor: pointer;
-  color: rgb(247, 246, 197);
+  cursor: inherit;
+  color: inherit;
   margin: 5px 0 -5px -1px;
   padding: 0;
-  text-shadow: -2px 2px 1px black;
+  text-shadow: inherit;
 }
 
 #x-menu-text {
   font-size: .8em;
   margin: 5px 0 -15px -1.5px;
-  color: rgb(247, 246, 197);
-  cursor: pointer;
-  text-shadow: -2px 2px 1px black;
 }
 
 /* Mobile Nav List */
@@ -134,42 +131,32 @@ header nav {
 #secondary-nav ul {
   padding: 0;
   margin: 0;
+  border-bottom: 1px solid rgb(247, 246, 197);
 }
 
 #secondary-nav ul li {
-  list-style-type: none;
-  text-align: center;
   padding: 15px;
   font-size: 1.2em;
   letter-spacing: .1em;
   font-style: italic;
-  border-bottom: 1px solid rgba(247, 246, 197);
-  background-color: rgb(54, 53, 27, .8);
-  color: rgba(247, 246, 197, .8);
-  text-shadow: -2px 2px rgba(0, 0, 0, .8);
+  border-bottom: 1px solid rgb(247, 246, 197);
+  background-color: rgba(54, 53, 27, .8);
+  color: rgb(247, 246, 197);
+  text-shadow: -2px 2px 1px black;
 }
 
 #secondary-nav ul li:hover {
   background-color: rgba(54, 53, 27);
-  color: rgba(255, 242, 126);
-  text-shadow: -2px 2px rgba(0, 0, 0);
-  transition: all 0.5s ease-in-out;
-}
-
-#secondary-nav ul {
-  border-bottom: 1px solid rgb(247, 246, 197);
 }
 
 /* Greys out rest of page when mobile nav is open */
 
 .second-nav-open {
-  -webkit-transition: opacity 200ms ease-in-out;
   transition: opacity 200ms ease-in-out;
   opacity: 0.5;
 }
 
 .close-secondary-nav {
-  -webkit-transition: opacity 300ms ease-in-out;
   transition: opacity 300ms ease-in-out;
   opacity: 1;
 }
@@ -184,6 +171,7 @@ header nav {
 
 main {
   background-color: #FFFFF9;
+  color: #2E1D1D;
 }
 
 #main-container {
@@ -192,13 +180,11 @@ main {
 }
 
 #page-heading {
-  text-align: center;
   font-family: 'Cormorant Garamond', serif;
   font-size: 8vw;
   font-weight: 400;
   font-style: italic;
   text-shadow: -1.5px 1.5px 1px #ad966a;
-  color: rgb(45, 29, 29);
   padding: 25px 0;
   margin: 0;
 }
@@ -215,12 +201,12 @@ main {
   border-radius: 20px;
   margin: 0;
   transform: scale(1);
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in;
 }
 
 #cover figure:hover {
   transform: scale(1.02);
-  transition: all 0.5s ease-in-out;
+  transition: transform 0.5s ease;
 }
 
 #cover-picture img {
@@ -228,13 +214,30 @@ main {
 }
 
 #cover-caption {
-  text-align: center;
   font-style: italic;
   padding: 10px 0;
   margin-top: -2px;
   background: white;
   border-radius: 0 0 20px 20px;
 }
+
+/* Main Styles */
+/* looks.html - #main-content */
+
+#page-description {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4vw;
+  font-weight: 400;
+  font-style: italic;
+  padding: 0;
+  margin: 0;
+}
+
+#latest-looks-gallery {
+  margin-bottom: 25px;
+}
+
+
 
 /* Sidebar */
 /* Sidebar - General */
@@ -243,7 +246,6 @@ main {
   border-radius: 20px;
   box-shadow: -2px 2px 6px 2px rgba(0, 0, 0, .5);
   margin-bottom: 25px;
-  /* width: 100px; */
 }
 
 #recent-blog-posts,
@@ -253,20 +255,10 @@ main {
   padding-bottom: 20px;
 }
 
-#sidebar a {
-  transition: color .5s ease-in;
-}
-
-#sidebar a:hover {
-  transition: color .5s ease;
-}
-
 #sidebar h2 {
-  text-align: center;
   font-size: 1.3em;
   padding: 20px 0;
   margin: 0;
-  color: #2E1D1D;
 }
 
 #sidebar hr {
@@ -291,7 +283,6 @@ main {
   display: flex;
   margin: 10px auto;
   border-radius: 5px;
-  /* width: 100%; */
 }
 
 .blog-snippet-thumbnail {
@@ -310,8 +301,6 @@ main {
   flex-direction: column;
   justify-content: space-around;
   margin: 5px;
-  color: #2E1D1D;
-  text-align: center;
 }
 
 .blog-snippet-title-date {
@@ -319,7 +308,6 @@ main {
 }
 
 .blog-snippet-title-date h3 {
-  font-weight: bold;
   margin: 0;
 }
 
@@ -379,14 +367,11 @@ main {
 }
 
 .look-snippet-thumbnail {
-  display: block;
   width: 100%;
   border-radius: 20px 20px 0 0;
 }
 
 .look-snippet-date {
-  color: #2E1D1D;
-  text-align: center;
   font-style: italic;
   padding: 10px 0;
   margin: 0;
@@ -401,34 +386,29 @@ main {
   margin: 0 auto;
 }
 
-.btn-style {
+.sidebar-btn-style {
   width: 100%;
   font-weight: 700;
-  cursor: pointer;
   padding: 0;
   height: 45px;
-  border: none;
-  background-size: 300% 100%;
+  box-shadow: -2px 5px 15px 0px rgba(72, 71, 36, .75);
   border-radius: 50px;
-  color: rgb(72, 71, 36);
-  transition: all .5s ease-in-out;
-  moz-transition: all .5s ease-in-out;
-  -o-transition: all .5s ease-in-out;
-  -webkit-transition: all .5s ease-in-out;
 }
 
-.btn-style:hover {
+/* Core styles for all buttons on the page */
+
+.btn-color {
+  border: none;
+  background-size: 300% 100%;
+  color: rgb(72, 71, 36);
+  transition: all .5s ease-in-out;
+  background-image: linear-gradient(to right, rgb(198, 197, 166), rgb(198, 197, 166), rgb(72, 71, 36), rgb(72, 71, 36));
+}
+
+.btn-color:hover {
   background-position: 100% 0;
   color: rgb(198, 197, 166);
   transition: all .5s ease-in-out;
-  moz-transition: all .5s ease-in-out;
-  -o-transition: all .5s ease-in-out;
-  -webkit-transition: all .5s ease-in-out;
-}
-
-.btn-style.btn-color {
-  background-image: linear-gradient(to right, rgb(198, 197, 166), rgb(198, 197, 166), rgb(72, 71, 36), rgb(72, 71, 36));
-  box-shadow: -2px 5px 15px 0px rgba(72, 71, 36, .75);
 }
 
 /* Newsletter */
@@ -451,16 +431,13 @@ main {
 
 #newsletter-signup-content {
   width: 100%;
-  border: 1px solid rgb(247, 246, 197);
   border-radius: 20px;
   padding: 20px 25px;
   margin: 0 20px;
   background-image: radial-gradient(circle at center,
       ivory 50%, rgb(247, 246, 197) 100%);
-  text-align: center;
   display: flex;
   flex-direction: column;
-  color: rgb(45, 29, 29);
 }
 
 #newsletter-signup-content h2 {
@@ -476,31 +453,21 @@ main {
 /* Newsletter Signup Card */
 /* Signup Button */
 
+#newsletter-sign-up-load {
+    width: 100px;
+    height: 40px;
+    border: none;
+}
+
 .signup-btn {
   padding: 10px 20px;
   margin: 0 auto;
-  cursor: pointer;
-  text-decoration: none;
-  color: rgb(72, 71, 36);
-  background-image: linear-gradient(to right, rgb(198, 197, 166), rgb(198, 197, 166), rgb(72, 71, 36), rgb(72, 71, 36));
-  background-size: 300% 100%;
-  border: none;
   border-radius: 10px;
   box-shadow: -1px 1px 0px 1px rgba(72, 71, 36, .7);
-  transition: all .5s ease-in-out;
-  moz-transition: all .5s ease-in-out;
-  -o-transition: all .5s ease-in-out;
-  -webkit-transition: all .5s ease-in-out;
 }
 
 .signup-btn:hover {
-  background-position: 100% 0;
-  color: rgb(198, 197, 166);
   box-shadow: -1px 1px 0px 1px rgb(163, 162, 130);
-  transition: color, background-position .5s ease-in-out;
-  moz-transition: color background-position .5s ease-in-out;
-  -o-transition: color background-position .5s ease-in-out;
-  -webkit-transition: color background-position .5s ease-in-out;
 }
 
 .signup-btn:active {
@@ -543,10 +510,7 @@ main {
 /* Content Box */
 
 #newsletter-popup-content {
-  color: #2E1D1D;
-  text-align: center;
   height: calc(100% - 40px);
-  border: 1px solid rgb(72, 71, 36);
   margin: 0 20px;
   background-image: radial-gradient(circle at center,
       ivory 50%, rgb(247, 246, 197) 100%);
@@ -564,7 +528,6 @@ main {
   align-self: flex-end;
   background-color: inherit;
   text-align: right;
-  cursor: pointer;
   font-size: 1.5em;
   padding: 0 4px 0 0;
   line-height: 1;
@@ -633,32 +596,16 @@ main {
 
 /* Back to Top Button */
 
-#top-style {
-  display: block;
+#back-to-top {
+  margin: 0 auto 25px;
+}
+
+#back-to-top-button {
   width: 65px;
   height: 65px;
   font-size: 3em;
-  margin: 0 auto 25px;
-  cursor: pointer;
-  border: none;
-  color: rgb(72, 71, 36);
-  background-image: linear-gradient(to right, rgb(198, 197, 166), rgb(198, 197, 166), rgb(72, 71, 36), rgb(72, 71, 36));
-  background-size: 300% 100%;
-  border-radius: 50px;
   box-shadow: -2px 5px 15px 0px rgba(72, 71, 36, .75);
-  transition: all .5s ease-in-out;
-  moz-transition: all .5s ease-in-out;
-  -o-transition: all .5s ease-in-out;
-  -webkit-transition: all .5s ease-in-out;
-}
-
-#top-style:hover {
-  background-position: 100% 0;
-  color: rgb(198, 197, 166);
-  transition: all .5s ease-in-out;
-  moz-transition: all .5s ease-in-out;
-  -o-transition: all .5s ease-in-out;
-  -webkit-transition: all .5s ease-in-out;
+  border-radius: 50px;
 }
 
 /* Footer */
@@ -673,7 +620,6 @@ footer {
   margin: 0 auto;
   padding-bottom: 16px;
   color: rgb(247, 246, 197);
-  text-align: center;
 }
 
 #footer-content {
@@ -685,7 +631,6 @@ footer {
   /* Contains two divs: social links and cozychic links */
   display: flex;
   flex-direction: column;
-  text-align: center;
 }
 
 #footer-container h3 {
@@ -698,10 +643,6 @@ footer {
   list-style-type: none;
   padding: 0;
   margin: 0;
-}
-
-.footer-links a {
-  color: rgb(247, 246, 197);
 }
 
 .social-links {
