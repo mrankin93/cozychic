@@ -27,12 +27,9 @@ Tablet-sized screens
   }
 
   #primary-nav-links li {
-    font-family: 'Playfair Display', serif;
     font-weight: 700;
     font-size: 1.5em;
     padding-left: 7%;
-    color: rgb(247, 246, 197);
-    text-shadow: -2px 2px black;
   }
 
   /* Main */
@@ -85,7 +82,6 @@ Tablet-sized screens
   .blog-snippet-content {
     display: flex;
     flex-direction: column;
-    /* flex-basis: 100%; */
     margin: 10px 8px;
   }
 
@@ -124,7 +120,7 @@ Tablet-sized screens
     .visible-scroll::-webkit-scrollbar-thumb {
       border-radius: 5px;
       background-color: rgba(72, 71, 36, .8);
-      -webkit-box-shadow: 0 0 1px rgba(255, 255, 255);
+      box-shadow: 0 0 1px rgba(255, 255, 255);
     }
 
     .scrollbar-div-visible {
@@ -145,10 +141,6 @@ Tablet-sized screens
     font-size: 1.7em;
   }
 
-  #footer-container li {
-    font-size: 1.05em;
-  }
-
   #footer-div-1,
   #footer-div-2 {
     flex: 1 1 100%;
@@ -162,7 +154,7 @@ Tablet-sized screens
     font-size: .8em;
   }
 
-  #footer-div-3 p  {
+  #footer-div-3 p {
     padding: 0 12.5px;
   }
 
