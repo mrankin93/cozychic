@@ -40,6 +40,18 @@ Tablet-sized screens
     padding: 40px 0;
   }
 
+  #page-description {
+    font-size: 1.92em;
+    padding-bottom: 45px;
+  }
+
+  /* Main */
+  /* looks.html - Gallery Grid */
+
+  #gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   /* Sidebar */
   /* Sidebar - General */
 

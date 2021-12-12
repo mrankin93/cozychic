@@ -3,7 +3,7 @@ Laptops and desktop sized screens
 */
 
 @media only screen and (min-width: 1024px) {
-  
+
   /* Header */
 
   #header-content {
@@ -20,7 +20,7 @@ Laptops and desktop sized screens
   /* Main */
 
   #page-heading {
-    padding: 50px 0;
+    padding: 40px 0;
   }
 
   #main-container {
@@ -36,6 +36,17 @@ Laptops and desktop sized screens
     flex: 0 1 80%;
   }
 
+  /* Main */
+  /* looks.html - Grid Layout */
+
+  #gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .gallery-caption {
+    font-size: .9em;
+  }
+
   /* Sidebar */
   /* Sidebar - General */
 
@@ -44,11 +55,13 @@ Laptops and desktop sized screens
     flex: 0 1 20%;
   }
 
-  #recent-blog-posts, #latest-looks {
+  #recent-blog-posts,
+  #latest-looks {
     padding-bottom: 20px;
   }
 
-  #recent-blog-posts h2, #latest-looks h2 {
+  #recent-blog-posts h2,
+  #latest-looks h2 {
     font-size: 1.2em;
     padding: 15px 0;
   }
@@ -58,10 +71,11 @@ Laptops and desktop sized screens
     margin: 7.5px 0 12.5px;
   }
 
-  .blog-snippet, .look-snippet {
+  .blog-snippet,
+  .look-snippet {
     margin: 7.5px 0;
   }
-  
+
   #latest-looks-list {
     margin: 7.5px 0 12.5px;
     display: flex;
@@ -90,7 +104,7 @@ Laptops and desktop sized screens
   #footer-div-3 p:first-child {
     padding: 0 15px 0 0;
   }
-  
+
   #footer-div-3 p:last-child {
     padding: 0 0 0 15px;
   }
@@ -99,7 +113,7 @@ Laptops and desktop sized screens
 /* Some specific styles for larger laptops and desktops */
 
 @media only screen and (min-width: 1441px) {
-  
+
   /* Header */
 
   header {
@@ -130,14 +144,36 @@ Laptops and desktop sized screens
 
   #page-heading {
     font-size: 5vw;
-    padding: 100px 0;
+    padding: 50px 0;
+  }
+
+  #page-description {
+    font-size: 3vw;
+  }
+
+  /* Main */
+  /* Gallery Caption */
+
+  .gallery-caption {
+    font-size: 1.1em;
   }
 
   /* Sidebar */
 
-  .blog-snippet, .look-snippet {
+  .blog-snippet,
+  .look-snippet {
     margin: 15px 0;
   }
 
+}
+
+/* Main */
+/* looks.html - Gallery Grid */
+
+@media only screen and (min-width: 2000px) {
+
+  #gallery-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
 
 }
