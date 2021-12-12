@@ -1,61 +1,58 @@
 /*
-1. Function for toggling the mobile nav menu
-Classes are added and removed when nav-menu element is clicked
-CSS Styles these classes to show or hide elements
+1. Toggles Mobile Nav Dropdown Menu
 */
 
 function toggleMenu() {
-  if (app.xMenuButton.classList.contains("x-menu-hidden")) {
-    app.xMenuButton.classList.remove("x-menu-hidden");
-    app.xMenuText.classList.remove("x-menu-hidden");
-    app.secondaryNav.classList.remove("secondary-nav-hidden");
-    app.pageMain.classList.remove("close-secondary-nav");
-    app.pageFooter.classList.remove("close-secondary-nav");
-    app.navMenuText.classList.add("nav-menu-hidden");
-    app.navMenuButton.classList.add("nav-menu-hidden");
-    app.pageMain.classList.add("second-nav-open");
-    app.pageFooter.classList.add("second-nav-open");
+  if (app.xMenuButton.classList.contains('x-menu-hidden')) {
+    app.xMenuButton.classList.remove('x-menu-hidden');
+    app.xMenuText.classList.remove('x-menu-hidden');
+    app.secondaryNav.classList.remove('secondary-nav-hidden');
+    app.pageMain.classList.remove('close-secondary-nav');
+    app.pageFooter.classList.remove('close-secondary-nav');
+    app.navMenuText.classList.add('nav-menu-hidden');
+    app.navMenuButton.classList.add('nav-menu-hidden');
+    app.pageMain.classList.add('second-nav-open');
+    app.pageFooter.classList.add('second-nav-open');
   } else {
-    app.xMenuButton.classList.add("x-menu-hidden");
-    app.xMenuText.classList.add("x-menu-hidden");
-    app.secondaryNav.classList.add("secondary-nav-hidden");
-    app.pageMain.classList.add("close-secondary-nav");
-    app.pageFooter.classList.add("close-secondary-nav");
-    app.navMenuText.classList.remove("nav-menu-hidden");
-    app.navMenuButton.classList.remove("nav-menu-hidden");
-    app.pageMain.classList.remove("second-nav-open");
-    app.pageFooter.classList.remove("second-nav-open");
+    app.xMenuButton.classList.add('x-menu-hidden');
+    app.xMenuText.classList.add('x-menu-hidden');
+    app.secondaryNav.classList.add('secondary-nav-hidden');
+    app.pageMain.classList.add('close-secondary-nav');
+    app.pageFooter.classList.add('close-secondary-nav');
+    app.navMenuText.classList.remove('nav-menu-hidden');
+    app.navMenuButton.classList.remove('nav-menu-hidden');
+    app.pageMain.classList.remove('second-nav-open');
+    app.pageFooter.classList.remove('second-nav-open');
   }
 }
 
 app.navMenu.onclick = toggleMenu;
 
 /*
-2. Event listener for clicking outside of mobile nav & header
-Function detects clicks for main and footer elements with .close-secondary-nav
+2. Function hides Mobile Dropdown Menu when click is detected outside of nav area
 */
 
 // Defines what hideSecondaryNav does
 function hideSecondaryNav() {
-  app.xMenuButton.classList.add("x-menu-hidden");
-  app.xMenuText.classList.add("x-menu-hidden");
-  app.secondaryNav.classList.add("secondary-nav-hidden");
-  app.pageMain.classList.add("close-secondary-nav");
-  app.pageFooter.classList.add("close-secondary-nav");
-  app.navMenuText.classList.remove("nav-menu-hidden");
-  app.navMenuButton.classList.remove("nav-menu-hidden");
-  app.pageMain.classList.remove("second-nav-open");
-  app.pageFooter.classList.remove("second-nav-open");
+  app.xMenuButton.classList.add('x-menu-hidden');
+  app.xMenuText.classList.add('x-menu-hidden');
+  app.secondaryNav.classList.add('secondary-nav-hidden');
+  app.pageMain.classList.add('close-secondary-nav');
+  app.pageFooter.classList.add('close-secondary-nav');
+  app.navMenuText.classList.remove('nav-menu-hidden');
+  app.navMenuButton.classList.remove('nav-menu-hidden');
+  app.pageMain.classList.remove('second-nav-open');
+  app.pageFooter.classList.remove('second-nav-open');
 }
 
 // Calls hideSecondaryNav when main/footer are clicked
 for (let i = 0; i < app.clickOutsideNav.length; i++) {
-  app.clickOutsideNav[i].addEventListener("click", hideSecondaryNav);
+  app.clickOutsideNav[i].addEventListener('click', hideSecondaryNav);
 }
 
 // Calls hideSecondaryNav when window reaches tablet sized screens
-window.addEventListener("resize", function () {
-  if (window.matchMedia("(min-width: 768px)").matches) {
+window.addEventListener('resize', function () {
+  if (window.matchMedia('(min-width: 768px)').matches) {
     hideSecondaryNav();
   } 
 })
@@ -66,7 +63,7 @@ Two different figcaptions display depending on screen width
 */
 
 window.onload = function () {
-  if (window.matchMedia("(min-width: 768px)").matches) {
+  if (window.matchMedia('(min-width: 768px)').matches) {
     app.coverCaption.innerHTML = `&ldquo;` + `Hayley reading a book` + `&rdquo;`;
   } else {
     app.coverCaption.innerHTML = `&ldquo;` + `Hayley holding a cup of tea` + `&rdquo;`;
@@ -77,8 +74,8 @@ window.onload = function () {
 4. When window is resized, the figcaption will change at the 768px breakpoint
 */
 
-window.addEventListener("resize", function () {
-  if (window.matchMedia("(min-width: 768px)").matches) {
+window.addEventListener('resize', function () {
+  if (window.matchMedia('(min-width: 768px)').matches) {
     app.coverCaption.innerHTML = `&ldquo;` + `Hayley reading a book` + `&rdquo;`;
   } else {
     app.coverCaption.innerHTML = `&ldquo;` + `Hayley holding a cup of tea` + `&rdquo;`;
@@ -99,18 +96,17 @@ document.addEventListener('mousemove', function checkHover() {
 */
 
 function loadNewsletter() {
-  document.getElementById('newsletter-popup').style.display = "flex";
+  app.newsletterPopup.style.display = "flex";
 }
-document.getElementById('newsletter-sign-up-load').onclick = loadNewsletter;
+app.loadPopup.onclick = loadNewsletter;
 
 function hideNewsletter() {
-  document.getElementById('newsletter-popup').style.display = "none";
+  app.newsletterPopup.style.display = "none";
 }
-document.getElementById('hide-popup').onclick = hideNewsletter;
-
+app.hidePopup.onclick = hideNewsletter;
 
 /* 
-7. Email Input Border turns green or red if value matches pattern below
+7. Email Input Border turns green if value matches pattern below and red if it doesn't match
 */
 
 const validateEmail = (email) => {
@@ -121,13 +117,13 @@ const validateEmail = (email) => {
 
 const validate = () => {
   const email = $('#email-text-field').val();
-  document.getElementById('email-text-field').classList.remove('error');
-  document.getElementById('email-text-field').classList.remove('correct');
+  app.inputEmail.classList.remove('error');
+  app.inputEmail.classList.remove('correct');
 
   if (validateEmail(email)) {
-    document.getElementById('email-text-field').classList.add('correct');
+    app.inputEmail.classList.add('correct');
   } else {
-    document.getElementById('email-text-field').classList.add('error');
+    app.inputEmail.classList.add('error');
   }
 }
 
@@ -139,7 +135,19 @@ $('#email-text-field').on('input', validate);
 
 $(document).ready(function() {
   
-  $('#top-style').click(function() {
-  $("html, body").animate({scrollTop: 0}, 500);
+  $('#back-to-top-button').click(function() {
+  $('html, body').animate({scrollTop: 0}, 500);
   });
 });
+
+/* 
+9. looks.html - Function to toggle caption when mouse moves over and leaves gallery-image
+*/
+
+Array.from(app.portraits).forEach(v => v.addEventListener('mouseover', function() {
+  this.parentElement.getElementsByClassName('gallery-caption')[0].classList.remove('gal-caption-hidden');
+}));
+
+Array.from(app.portraits).forEach(v => v.addEventListener('mouseleave', function() {
+  this.parentElement.getElementsByClassName('gallery-caption')[0].classList.add('gal-caption-hidden');
+}));

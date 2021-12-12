@@ -28,5 +28,13 @@ let app = {
   removeScroll: e => {
     app.latestLooksList.classList.remove('visible-scroll');
     app.scrollbarDiv.classList.add('scrollbar-div-visible');
-  }
+  },
+  // 6. Load and Hide Newsletter Popup
+  newsletterPopup: document.getElementById('newsletter-popup'),
+  loadPopup: document.getElementById('newsletter-sign-up-load'),
+  hidePopup: document.getElementById('hide-popup'),
+  // 7. Validate Email Function
+  inputEmail: document.getElementById('email-text-field'),
+  // 9. Toggle Gallery Caption
+  portraits: document.getElementsByClassName("gallery-image")
 };
