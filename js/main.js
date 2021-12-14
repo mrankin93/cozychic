@@ -2,31 +2,15 @@
 1. Toggles Mobile Nav Dropdown Menu
 */
 
-function toggleMenu() {
-  if (app.xMenuButton.classList.contains('x-menu-hidden')) {
-    app.xMenuButton.classList.remove('x-menu-hidden');
-    app.xMenuText.classList.remove('x-menu-hidden');
-    app.secondaryNav.classList.remove('secondary-nav-hidden');
-    app.pageMain.classList.remove('close-secondary-nav');
-    app.pageFooter.classList.remove('close-secondary-nav');
-    app.navMenuText.classList.add('nav-menu-hidden');
-    app.navMenuButton.classList.add('nav-menu-hidden');
-    app.pageMain.classList.add('second-nav-open');
-    app.pageFooter.classList.add('second-nav-open');
-  } else {
-    app.xMenuButton.classList.add('x-menu-hidden');
-    app.xMenuText.classList.add('x-menu-hidden');
-    app.secondaryNav.classList.add('secondary-nav-hidden');
-    app.pageMain.classList.add('close-secondary-nav');
-    app.pageFooter.classList.add('close-secondary-nav');
-    app.navMenuText.classList.remove('nav-menu-hidden');
-    app.navMenuButton.classList.remove('nav-menu-hidden');
-    app.pageMain.classList.remove('second-nav-open');
-    app.pageFooter.classList.remove('second-nav-open');
-  }
-}
+// Toggles the dropdown menu
+$("#nav-menu").click(function(){
+  $(".menuElements").toggleClass("hiddenMenu");
+});
 
-app.navMenu.onclick = toggleMenu;
+// Toggles the opacity of main & footer
+$("#nav-menu").click(function(){
+  $(".greyBackground").toggleClass("greyOn greyOff");
+});
 
 /*
 2. Function hides Mobile Dropdown Menu when click is detected outside of nav area
@@ -34,20 +18,18 @@ app.navMenu.onclick = toggleMenu;
 
 // Defines what hideSecondaryNav does
 function hideSecondaryNav() {
-  app.xMenuButton.classList.add('x-menu-hidden');
-  app.xMenuText.classList.add('x-menu-hidden');
-  app.secondaryNav.classList.add('secondary-nav-hidden');
-  app.pageMain.classList.add('close-secondary-nav');
-  app.pageFooter.classList.add('close-secondary-nav');
-  app.navMenuText.classList.remove('nav-menu-hidden');
-  app.navMenuButton.classList.remove('nav-menu-hidden');
-  app.pageMain.classList.remove('second-nav-open');
-  app.pageFooter.classList.remove('second-nav-open');
+  $(".greyBackground").removeClass("greyOn");
+  $(".greyBackground").addClass("greyOff");
+  $('#nav-menu-text').removeClass('hiddenMenu');
+  $('#nav-menu-button').removeClass('hiddenMenu');
+  $('#x-menu-text').addClass('hiddenMenu');
+  $('#x-menu-button').addClass('hiddenMenu');
+  $('#secondary-nav').addClass('hiddenMenu');
 }
 
 // Calls hideSecondaryNav when main/footer are clicked
-for (let i = 0; i < app.clickOutsideNav.length; i++) {
-  app.clickOutsideNav[i].addEventListener('click', hideSecondaryNav);
+for (let i = 0; i < $('#grey-out-div').length; i++) {
+  $('#grey-out-div')[i].addEventListener('click', hideSecondaryNav);
 }
 
 // Calls hideSecondaryNav when window reaches tablet sized screens
