@@ -83,6 +83,12 @@ header nav {
   justify-content: flex-end;
 }
 
+/* Primary Nav won't become visible until 768px */
+
+#primary-nav-links {
+  display: none;
+}
+
 /* Mobile Nav Hamburger Button */
 
 #nav-menu {
@@ -121,9 +127,10 @@ header nav {
   margin: 5px 0 -15px -1.5px;
 }
 
-/* Mobile Nav List */
+/* Mobile Dropdown Menu (secondary nav) */
 
 #secondary-nav {
+  width: 100%;
   position: fixed;
   z-index: 2;
 }
@@ -149,21 +156,24 @@ header nav {
   background-color: rgba(54, 53, 27);
 }
 
-/* Greys out rest of page when mobile nav is open */
+#grey-out-div {
+  height: 100vh;
+}
 
-.second-nav-open {
-  transition: opacity 200ms ease-in-out;
+/* Classes to Toggle Mobile Dropdown Menu Visibility & grey out rest of page */
+
+.hiddenMenu {
+  display: none;
+}
+
+.greyOn {
+  transition: opacity 300ms ease-in-out;
   opacity: 0.5;
 }
 
-.close-secondary-nav {
+.greyOff {
   transition: opacity 300ms ease-in-out;
   opacity: 1;
-}
-
-#grey-out-div {
-  width: 100vw;
-  height: 100vh;
 }
 
 /* Main Styles */
@@ -732,28 +742,6 @@ footer {
 .social-links li:nth-of-type(4) i {
   position: relative;
   right: 31px;
-}
-
-/* Hidden Elements */
-
-#primary-nav-links {
-  /* Won't become visible until 768px */
-  display: none;
-}
-
-.secondary-nav-hidden {
-  /* Mobile Nav */
-  display: none;
-}
-
-.nav-menu-hidden {
-  /* Mobile Nav - Menu Button */
-  display: none;
-}
-
-.x-menu-hidden {
-  /* Mobile Nav - Close Button */
-  display: none;
 }
 
 /* Some additional styles for extra small phones up to 350px */

@@ -1,20 +1,9 @@
-// Object to store variables
+// Object to store variables for Functions 3, 5, 6, 7, & 9
 
 let app = {
-  // 1. toggleMenu()
-  xMenuButton: document.getElementById("x-menu-button"),
-  xMenuText: document.getElementById("x-menu-text"),
-  navMenuButton: document.getElementById("nav-menu-button"),
-  navMenuText: document.getElementById("nav-menu-text"),
-  secondaryNav: document.getElementById("secondary-nav"),
-  pageMain: document.getElementById("page-main"),
-  pageFooter: document.getElementById("page-footer"),
-  navMenu: document.getElementById("nav-menu"),
-  // 2. hideSecondaryNav()
-  clickOutsideNav: document.getElementsByClassName("close-secondary-nav"),
-  // 3 & 4. figcaption
+  // Function 3 ( window onload ) & Function 4 ( window resize )
   coverCaption: document.getElementById("cover-caption"),
-  // 5. checkHover()
+  // Function 5 ( checkHover() )
   // 5.1. isHover() checks if element is hovered
   isHover: e => e.parentElement.querySelector(':hover') === e,
   latestLooksList: document.getElementById('latest-looks-list'),
@@ -29,12 +18,12 @@ let app = {
     app.latestLooksList.classList.remove('visible-scroll');
     app.scrollbarDiv.classList.add('scrollbar-div-visible');
   },
-  // 6. Load and Hide Newsletter Popup
+  // Function 6 ( loadNewsletter() & hideNewsletter() )
   newsletterPopup: document.getElementById('newsletter-popup'),
   loadPopup: document.getElementById('newsletter-sign-up-load'),
   hidePopup: document.getElementById('hide-popup'),
-  // 7. Validate Email Function
+  // Function 7 ( validateEmail() )
   inputEmail: document.getElementById('email-text-field'),
-  // 9. Toggle Gallery Caption
+  // Function 9 ( addEventListener() mouseover/mouseleave )
   portraits: document.getElementsByClassName("gallery-image")
 };

@@ -32,10 +32,10 @@
       <nav id="primary-nav">
         <!-- MENU BUTTON - MENU & CLOSE X -->
         <div id="nav-menu">
-          <p id="nav-menu-text">MENU</p>
-          <button id="nav-menu-button">&#9776;</button>
-          <p id="x-menu-text" class="x-menu x-menu-hidden">CLOSE</p>
-          <button id="x-menu-button" class="x-menu x-menu-hidden">&times;</button>
+          <p id="nav-menu-text" class="menuElements">MENU</p>
+          <button id="nav-menu-button" class="menuElements">&#9776;</button>
+          <p id="x-menu-text" class="menuElements hiddenMenu">CLOSE</p>
+          <button id="x-menu-button" class="menuElements hiddenMenu">&times;</button>
         </div>
         <!-- NAVIGATION FOR TABLET & LAPTOP SCREEN SIZES -->
         <ul id="primary-nav-links">
@@ -47,7 +47,7 @@
     </div>
   </header>
   <!-- DROPDOWN MOBILE MENU -->
-  <nav id="secondary-nav" class="secondary-nav-hidden">
+  <nav id="secondary-nav" class="menuElements hiddenMenu">
     <ul>
       <a href="../pages/looks.html">
         <li>Looks</li>
@@ -59,10 +59,10 @@
         <li>Contact</li>
       </a>
     </ul>
-    <div id="grey-out-div" class="close-secondary-nav"></div>
+    <div id="grey-out-div"></div>
   </nav>
   <!-- MAIN SECTION - Contains #main-container -->
-  <main id="page-main" class="close-secondary-nav">
+  <main id="page-main" class="greyBackground greyOff">
     <!-- Divider controls maximum content width -->
     <div id="main-container">
       <!-- WEBSITE HEADING -->
@@ -209,7 +209,7 @@
     </div>
   </main>
   <!-- FOOTER -->
-  <footer id="page-footer" class="close-secondary-nav">
+  <footer id="page-footer" class="greyBackground greyOff">
     <!-- DIVIDER SETS CONTENT MAX-WIDTH -->
     <div id="footer-content">
       <!-- CONTAINER FOR SOCIAL AND COZYCHIC LINKS -->

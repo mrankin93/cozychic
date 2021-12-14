@@ -2,7 +2,7 @@
 
 <div align="center">
   <a href="https://opensource.org/licenses/GPL-3.0"><img src="https://img.shields.io/github/license/mrankin93/cozychic"></a> 
-  <a href="https://github.com/mrankin93/cozychic/commits/main"><img src="https://img.shields.io/github/commit-activity/m/mrankin93/cozychic"></a>
+  <a href="https://github.com/mrankin93/cozychic/commits/main"><img src="https://img.shields.io/github/commit-activity/y/mrankin93/cozychic"></a>
   <a href="https://github.com/mrankin/cozychic"><img src="https://img.shields.io/github/repo-size/mrankin93/cozychic"></a>
 </div>
 

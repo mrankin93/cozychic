@@ -5,13 +5,9 @@ Tablet-sized screens
 @media only screen and (min-width: 768px) {
 
   /* Navigation */
-  /* Hiding Mobile Nav */
+  /* Hides Hamburger Button */
 
   #nav-menu {
-    display: none;
-  }
-
-  #secondary-nav {
     display: none;
   }
 
